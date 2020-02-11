@@ -1,0 +1,23 @@
+<% const rootPath = './'; %>
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>monoweb.jp</title>
+    <meta name="description" content="A description of the page">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+    <meta name="theme-color" content="#603">
+    <meta name="format-detection" content="telephone=no">
+    <%- include(rootPath + 'partials/_head') %>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<%- include(rootPath + 'partials/_header') %>
+<main></main>
+<%- include(rootPath + 'partials/_footer') %>
+<script src="/assets/js/bundle.js"></script>
+<noscript></noscript>
+</body>
+</html>
