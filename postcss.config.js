@@ -1,5 +1,5 @@
 module.exports = () => ({
-    map: true,
+    map: false,
     plugins: {
         'postcss-sorting': {
             "order": [
@@ -345,7 +345,6 @@ module.exports = () => ({
         },
         'autoprefixer': {},
         'csswring': {},
-        'css-mqpacker': {},
-        'postcssNormalize': {}
+        'css-mqpacker': {}
     }
 });

@@ -3,7 +3,9 @@
     "stylelint-scss",
     "stylelint-order"
   ],
-  "ignoreFiles": [],
+  "ignoreFiles": [
+    "src/sites/assets/scss/foundation/_modern-normalize.scss"
+  ],
   "rules": {
     "string-quotes": "single",
     "no-duplicate-selectors": true,
