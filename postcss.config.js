@@ -346,5 +346,6 @@ module.exports = () => ({
         'autoprefixer': {},
         'csswring': {},
         'css-mqpacker': {},
+        'postcssNormalize': {}
     }
 });

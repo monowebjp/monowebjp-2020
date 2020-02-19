@@ -10,6 +10,7 @@
     "node": "12.15.0",
     "npm": ">=6.13.4"
   },
+  "browserslist": "last 2 version",
   "scripts": {
     "start": "run-p watch server",
     "prod": "run-s clean prod:js prod:css prod:html",
