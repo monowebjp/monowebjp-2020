@@ -5,7 +5,7 @@ const imageminGifsicle = require('imagemin-gifsicle');
 const imageminSvgo = require('imagemin-svgo');
 const imageminWebp = require('imagemin-webp');
 
-imagemin(['src/**/*.{jpg,png,gif,svg}'], {
+imagemin(['src/sites/**/*.{jpg,png,gif,svg}'], {
     plugins: [
         imageminMozjpeg({quality: 80}),
         imageminPngquant({quality: [0.65, 0.8]}), //'65-80'←この書き方だとエラー出た
@@ -13,7 +13,7 @@ imagemin(['src/**/*.{jpg,png,gif,svg}'], {
         imageminSvgo()
     ],
     replaceOutputDir: output => {
-        return output.replace(/src\//, './dist/')
+        return output.replace(/src\/sites\//, './dist/')
     }
 }).then(() => {
     imagemin(['dist/**/*.{jpg,png,gif}'], {

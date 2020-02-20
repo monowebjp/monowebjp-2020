@@ -1,14 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1012" height="3" viewBox="0 0 1012 3">
-  <g id="グループ_44" data-name="グループ 44" transform="translate(-420 -1005.754)">
-    <rect id="長方形_2" data-name="長方形 2" width="94.465" height="3" transform="translate(420 1005.754)" fill="#333"/>
-    <rect id="長方形_3" data-name="長方形 3" width="94.465" height="3" transform="translate(520.817 1005.754)" fill="#cc6060"/>
-    <rect id="長方形_4" data-name="長方形 4" width="94.465" height="3" transform="translate(623.897 1005.754)" fill="#ffd655"/>
-    <rect id="長方形_5" data-name="長方形 5" width="94.465" height="3" transform="translate(725.845 1005.754)" fill="#6fa562"/>
-    <rect id="長方形_6" data-name="長方形 6" width="94.465" height="3" transform="translate(827.793 1005.754)" fill="#c1709e"/>
-    <rect id="長方形_7" data-name="長方形 7" width="94.465" height="3" transform="translate(929.742 1005.754)" fill="#6e98db"/>
-    <rect id="長方形_8" data-name="長方形 8" width="94.465" height="3" transform="translate(1031.691 1005.754)" fill="#b4c455"/>
-    <rect id="長方形_9" data-name="長方形 9" width="94.465" height="3" transform="translate(1133.638 1005.754)" fill="#ef9797"/>
-    <rect id="長方形_10" data-name="長方形 10" width="94.465" height="3" transform="translate(1236.718 1005.754)" fill="#f9ae5d"/>
-    <rect id="長方形_11" data-name="長方形 11" width="94.465" height="3" transform="translate(1337.535 1005.754)" fill="#8fd4f7"/>
-  </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="レイヤー_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" width="1018.4px" height="3px" viewBox="0 0 1018.4 3" style="enable-background:new 0 0 1018.4 3;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#333333;}
+	.st1{fill:#CC6060;}
+	.st2{fill:#FFD655;}
+	.st3{fill:#6FA562;}
+	.st4{fill:#C1709E;}
+	.st5{fill:#6E98DB;}
+	.st6{fill:#B4C455;}
+	.st7{fill:#EF9797;}
+	.st8{fill:#F9AE5D;}
+	.st9{fill:#8FD4F7;}
+</style>
+<g>
+	<path class="st0" d="M3.2,0h94.5v3H3.2V0z"/>
+	<path class="st1" d="M104,0h94.5v3H104V0z"/>
+	<path class="st2" d="M207.1,0h94.5v3h-94.5V0z"/>
+	<path class="st3" d="M309,0h94.5v3H309V0z"/>
+	<path class="st4" d="M411,0h94.5v3H411V0z"/>
+	<path class="st5" d="M512.9,0h94.5v3h-94.5V0z"/>
+	<path class="st6" d="M614.9,0h94.5v3h-94.5L614.9,0z"/>
+	<path class="st7" d="M716.8,0h94.5v3h-94.5L716.8,0z"/>
+	<path class="st8" d="M819.9,0h94.5v3h-94.5V0z"/>
+	<path class="st9" d="M920.7,0h94.5v3h-94.5L920.7,0z"/>
+</g>
 </svg>
