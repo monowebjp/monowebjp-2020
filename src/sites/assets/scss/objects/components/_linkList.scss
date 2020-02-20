@@ -1,13 +1,19 @@
 .mjpc-linkList {
+    $this: &;
     margin: 0;
     padding: 0;
     list-style: none;
 
-    &--horizontal {
+    &#{$this}--horizontal {
         display: flex;
+
+        #{$this}__item {
+            margin: 0 #{(10 / $base-font-size)}rem 0 0;
+        }
     }
 
-    &__link {
+    #{$this}__link {
         color: $font-color;
+        text-decoration: none;
     }
 }

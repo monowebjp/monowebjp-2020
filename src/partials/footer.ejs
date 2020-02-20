@@ -2,27 +2,20 @@
     <div class="mjpl-footer__inner">
         <div class="mjpc-grid">
             <div class="mjpc-grid__col6">
-                <%- include('../objects/components/linkList'); %>
+                <%- include('../objects/components/linkList', {lists: [
+                    {
+                        name: "サイトマップ",
+                        "link": "/sitemap/"
+                    },
+                    {
+                        name: "プライバシーポリシー",
+                        "link": "/privacypolicy/"
+                    }
+                ]}); %>
                 <%- include('../objects/projects/copyright'); %>
             </div>
             <div class="mjpc-grid__col6">
-                <div class="mjpp-share mjpp-share--minimum">
-                    <p class="mjpp-share__title">このサイトをシェア</p>
-                    <ul class="mjpp-share__buttons">
-                        <li class="mjpp-share__item">
-                            <button></button>
-                        </li>
-                        <li class="mjpp-share__item">
-                            <button></button>
-                        </li>
-                        <li class="mjpp-share__item">
-                            <button></button>
-                        </li>
-                        <li class="mjpp-share__item">
-                            <button></button>
-                        </li>
-                    </ul>
-                </div>
+                <%- include('../objects/projects/share'); %>
             </div>
         </div>
     </div>

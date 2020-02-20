@@ -1,4 +1,22 @@
 <ul class="mjpc-linkList mjpc-linkList--horizontal">
-    <li class="mjpc-linkList__item"><a href="/sitemap/" class="mjpc-linkList__link">サイトマップ</a></li>
-    <li class="mjpc-linkList__item"><a href="/privacy-policy/" class="mjpc-linkList__link">プライバシーポリシー</a></li>
+    <%
+        if (typeof lists === 'undefined') {
+            var lists = [
+                {
+                    "name": "リンクテキスト",
+                    "link": "/example/"
+                }, {
+                    "name": "リンクテキスト",
+                    "link": "/example/"
+                }
+            ];
+        }
+        lists.forEach(function (item) {
+    %>
+    <li class="mjpc-linkList__item">
+        <a href="<%= item.link %>" class="mjpc-linkList__link">
+            <span class="mjpc-linkList__text"><%= item.name %></span>
+        </a>
+    </li>
+    <% }); %>
 </ul>

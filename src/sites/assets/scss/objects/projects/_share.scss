@@ -1,0 +1,32 @@
+.mjpp-share {
+    $this: &;
+
+    &#{$this}--minimum {
+        margin: 0 0 0 auto;
+        width: #{(145 / $base-font-size)}rem;
+    }
+
+     #{$this}__title {
+         margin: 0;
+         font-size: #{(10 / $base-font-size)}rem;
+         text-align: center;
+     }
+
+    #{$this}__buttons {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    #{$this}__button {
+        border: 0;
+        padding: 0;
+        background: transparent;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

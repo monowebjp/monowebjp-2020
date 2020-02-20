@@ -4,13 +4,13 @@
 const fractal = module.exports = require('@frctl/fractal').create();
 
 /* Set the title of the project */
-fractal.set('project.title', 'FooCorp Component Library');
+fractal.set('project.title', 'monoweb.jp');
 
 /* File extentions */
-fractal.components.set('ext', '.ejs');
+fractal.components.set('ext', '.html');
 
 /* Tell Fractal where the components will live */
-fractal.components.set('path', __dirname + '/src/objects');
+fractal.components.set('path', __dirname + '/styleguide');
 // fractal.web.set('builder.dest', __dirname + '/build');
 /* Tell Fractal where the documentation pages will live */
 fractal.docs.set('path', __dirname + '/src/docs');
