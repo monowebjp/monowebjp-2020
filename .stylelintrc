@@ -50,7 +50,7 @@
     "comment-whitespace-inside": "always",
     "selector-pseudo-element-colon-notation": "double",
     "selector-pseudo-class-parentheses-space-inside": "never",
-    "selector-class-pattern": "^[a-z][-a-z0-9_]*$",
+    "selector-class-pattern": "^[a-z][-a-zA-Z0-9_]*$",
     "media-feature-range-operator-space-after": "always",
     "media-feature-parentheses-space-inside": "never",
     "media-feature-name-no-vendor-prefix": true,

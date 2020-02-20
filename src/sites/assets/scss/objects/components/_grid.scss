@@ -1,0 +1,13 @@
+.mjpc-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: #{(-15 / $base-font-size)}rem #{(-15 / $base-font-size)}rem 0;
+
+    @for $i from 1 through 12 {
+        #{&}__col#{$i} {
+            padding: #{(15 / $base-font-size)}rem;
+            width: calc(100% / 12 * #{$i});
+        }
+    }
+}

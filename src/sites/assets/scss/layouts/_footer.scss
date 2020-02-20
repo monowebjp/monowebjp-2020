@@ -1,4 +1,9 @@
 .mjpl-footer {
     padding: 0 #{(20 / $base-font-size)}rem 10px;
     background: left 50% bottom 5px repeat-x url('/assets/img/header-border.svg');
+
+    &__inner {
+        margin: 0 auto;
+        max-width: #{(1012 / $base-font-size)}rem;
+    }
 }

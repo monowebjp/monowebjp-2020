@@ -1,0 +1,13 @@
+.mjpc-linkList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &--horizontal {
+        display: flex;
+    }
+
+    &__link {
+        color: $font-color;
+    }
+}
