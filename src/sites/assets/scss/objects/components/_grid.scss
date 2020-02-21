@@ -1,8 +1,13 @@
 .mjpc-grid {
+    $this: &;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin: #{(-15 / $base-font-size)}rem #{(-15 / $base-font-size)}rem 0;
+
+    &#{$this}--lower {
+        align-items: flex-end;
+    }
 
     @for $i from 1 through 12 {
         #{&}__col#{$i} {

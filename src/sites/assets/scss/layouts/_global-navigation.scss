@@ -1,0 +1,40 @@
+.mjpl-globalNavigation {
+    $this: &;
+    margin: 0 auto;
+    max-width: #{(79.5 * 4 / $base-font-size)}rem;
+
+    &__inner {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+    }
+
+    &__item:nth-child(2),
+    &__item:last-child {
+        #{$this}__text {
+            letter-spacing: initial;
+            text-indent: initial;
+        }
+    }
+
+    &__link {
+        display: block;
+        width: #{(79.5 / $base-font-size)}rem;
+        text-decoration: none;
+        color: $font-color;
+        text-align: center;
+    }
+
+    &__icon {
+        fill: $font-color;
+    }
+
+    &__text {
+        display: block;
+        font-size: #{(12 / $base-font-size)}rem;
+        letter-spacing: .2em;
+        text-indent: -.2em;
+    }
+}
