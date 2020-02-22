@@ -3,7 +3,7 @@
 
     &#{$this}--minimum {
         margin: 0 0 0 auto;
-        width: #{(145 / $base-font-size)}rem;
+        width: #{(160 / $base-font-size)}rem;
     }
 
     #{$this}__title {
@@ -14,13 +14,14 @@
 
     #{$this}__buttons {
         display: flex;
-        justify-content: space-between;
+        //justify-content: space-between;
         margin: 0;
         padding: 0;
         list-style: none;
     }
 
     #{$this}__button {
+        width: #{(40 / $base-font-size)}rem;
         border: 0;
         padding: 0;
         background: transparent;

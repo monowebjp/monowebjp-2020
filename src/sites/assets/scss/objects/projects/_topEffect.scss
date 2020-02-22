@@ -1,0 +1,31 @@
+.p-topEffect {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #2970ce 0%, #82c6ff 100%);
+    overflow: hidden;
+    transition: width .2s ease-in-out, height .2s ease-in-out;
+
+    &__cloud1 {
+        position: absolute;
+        animation: cloud1 30s cubic-bezier(.445, .05, .55, .95) 0s infinite;
+    }
+
+    &.is-active {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@keyframes cloud1 {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100vw);
+    }
+}

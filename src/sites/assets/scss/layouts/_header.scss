@@ -1,5 +1,6 @@
 .mjpl-header {
     background: 50% 5px repeat-x url('/assets/img/header-border.svg');
+    padding: #{(30 / $base-font-size)}rem 0 0;
 
     &__logo {
         margin: 0;

@@ -25,10 +25,21 @@
         text-decoration: none;
         color: $font-color;
         text-align: center;
+
+        &.is-current {
+            #{$this}__icon {
+                fill: $primary-color;
+            }
+
+            #{$this}__text {
+                color: $primary-color;
+            }
+        }
     }
 
     &__icon {
         fill: $font-color;
+        transition: fill .2s ease-in-out;
     }
 
     &__text {
