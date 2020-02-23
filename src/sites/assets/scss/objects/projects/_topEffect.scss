@@ -10,7 +10,7 @@
     background: linear-gradient(to bottom, #2970ce 0%, #82c6ff 100%);
     //opacity: 0;
     overflow: hidden;
-    animation: topEffect 100s  cubic-bezier(.445, .05, .55, .95) 0s forwards;
+    animation: topEffect 30s  cubic-bezier(.445, .05, .55, .95) 0s forwards;
 
     &__mask {
         position: absolute;
@@ -18,7 +18,7 @@
         left: 0;
         width: 100vw;
         height: 100vh;
-        animation: topEffectMask 100s  cubic-bezier(.445, .05, .55, .95) 0s forwards;
+        animation: topEffectMask 4s  cubic-bezier(.445, .05, .55, .95) 2s forwards;
     }
 
     &__window {
@@ -26,8 +26,9 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 300px;
-        height: 300px;
+        width: 200px;
+        height: 200px;
+        background: linear-gradient(to bottom, #2970ce 0%, #82c6ff 100%);
 
         #{$this}__borderTop {
             position: absolute;
@@ -84,11 +85,11 @@
 
 @keyframes topEffectMask {
     0% {
-        background: rgba($mono-light-color, 1);
+        background: rgba($mono-light-color, 0);
     }
 
     100% {
-        background: rgba($mono-light-color, 0);
+        background: rgba($mono-light-color, 1);
     }
 }
 
