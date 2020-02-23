@@ -1,13 +1,70 @@
 .p-topEffect {
+    $this: &;
     position: fixed;
     top: 50%;
     left: 50%;
+    z-index: 1;
     transform: translate(-50%, -50%);
     width: 100vw;
     height: 100vh;
     background: linear-gradient(to bottom, #2970ce 0%, #82c6ff 100%);
+    //opacity: 0;
     overflow: hidden;
-    animation: topEffect 4s  cubic-bezier(.445, .05, .55, .95) 5s;
+    animation: topEffect 100s  cubic-bezier(.445, .05, .55, .95) 0s forwards;
+
+    &__mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        animation: topEffectMask 100s  cubic-bezier(.445, .05, .55, .95) 0s forwards;
+    }
+
+    &__window {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+        height: 300px;
+
+        #{$this}__borderTop {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 1px;
+            background: $mono-light-color;
+            animation: borderWidth .4s ease 0s forwards;
+        }
+
+        #{$this}__borderRight {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 1px;
+            background: $mono-light-color;
+            animation: borderHeight .4s ease .4s forwards;
+        }
+
+        #{$this}__borderBottom {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 1px;
+            background: $mono-light-color;
+            animation: borderWidth .4s ease .8s forwards;
+        }
+
+        #{$this}__borderLeft {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 1px;
+            background: $mono-light-color;
+            animation: borderHeight .4s ease 1.2s forwards;
+        }
+    }
 
     &__cloud1 {
         position: absolute;
@@ -17,13 +74,41 @@
 
 @keyframes topEffect {
     0% {
-        opacity: 1;
         z-index: 0;
     }
 
     100% {
-        opacity: 0;
         z-index: -1;
+    }
+}
+
+@keyframes topEffectMask {
+    0% {
+        background: rgba($mono-light-color, 1);
+    }
+
+    100% {
+        background: rgba($mono-light-color, 0);
+    }
+}
+
+@keyframes borderWidth {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes borderHeight {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 100%;
     }
 }
 
