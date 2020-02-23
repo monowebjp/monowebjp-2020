@@ -7,16 +7,23 @@
     height: 100vh;
     background: linear-gradient(to bottom, #2970ce 0%, #82c6ff 100%);
     overflow: hidden;
-    transition: width .2s ease-in-out, height .2s ease-in-out;
+    animation: topEffect 4s  cubic-bezier(.445, .05, .55, .95) 5s;
 
     &__cloud1 {
         position: absolute;
         animation: cloud1 30s cubic-bezier(.445, .05, .55, .95) 0s infinite;
     }
+}
 
-    &.is-active {
-        width: 300px;
-        height: 300px;
+@keyframes topEffect {
+    0% {
+        opacity: 1;
+        z-index: 0;
+    }
+
+    100% {
+        opacity: 0;
+        z-index: -1;
     }
 }
 

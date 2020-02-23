@@ -38,12 +38,7 @@
     "watch:css": "chokidar \"src/sites/assets/scss/**/*.scss\" -c \"npm run css\"",
     "watch:js": "chokidar \"src/sites/assets/js/**/*.ts\" -c \"npm run js\"",
     "watch:image": "chokidar  \"src/**/*.(gif|jpg|png|svg)\" -c \"npm run image\"",
-    "server": "run-s server:docker server:bs",
-    "server:bs": "browser-sync start --config bs-config.js",
-    "server:docker": "docker-compose up -d",
-    "end": "run-s end:docker end:watch",
-    "end:docker": "docker-compose down",
-    "end:watch": "killall node",
+    "server": "browser-sync start --config bs-config.js",
     "update": "ncu -u"
   },
   "devDependencies": {
