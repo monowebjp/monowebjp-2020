@@ -1,16 +1,14 @@
 .p-topEffect {
     $this: &;
     position: fixed;
-    top: 50%;
-    left: 50%;
-    z-index: 1;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    z-index: -1;
     width: 100vw;
     height: 100vh;
     background: linear-gradient(to bottom, #2970ce 0%, #82c6ff 100%);
     //opacity: 0;
     overflow: hidden;
-    animation: topEffect 30s  cubic-bezier(.445, .05, .55, .95) 0s forwards;
 
     &__mask {
         position: absolute;
@@ -26,9 +24,12 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 200px;
-        height: 200px;
-        background: linear-gradient(to bottom, #2970ce 0%, #82c6ff 100%);
+        width: calc((322 / 1280) * 100vw);
+        height: calc((322 / 832) * 100vh);
+        background-image: linear-gradient(to bottom, #2970ce 0%, #82c6ff 100%);
+        background-size: 100vh 100vw;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
 
         #{$this}__borderTop {
             position: absolute;
@@ -70,16 +71,6 @@
     &__cloud1 {
         position: absolute;
         animation: cloud1 30s cubic-bezier(.445, .05, .55, .95) 0s infinite;
-    }
-}
-
-@keyframes topEffect {
-    0% {
-        z-index: 0;
-    }
-
-    100% {
-        z-index: -1;
     }
 }
 
