@@ -1,6 +1,13 @@
 <footer class="mjpl-footer">
     <div class="mjpl-footer__inner">
         <div class="mjpl-footer__upper">
+            <%- include('../objects/components/button', {data: [
+            {
+            link: true,
+            name: "サービス内容",
+            func: "/services/"
+            }
+            ]}); %>
         </div>
         <div class="mjpl-footer__lower">
             <div class="mjpc-grid mjpc-grid--lower">
@@ -8,7 +15,7 @@
                     <%- include('../objects/components/linkList', {data: [
                     {
                     name: "プライバシーポリシー",
-                    "link": "/privacypolicy/"
+                    link: "/privacypolicy/"
                     }
                     ]}); %>
                     <%- include('../objects/projects/copyright'); %>
