@@ -1,3 +1,6 @@
+<%
+var srcPath = '../';
+%>
 <!doctype html>
 <html lang="ja">
 <head>
@@ -19,14 +22,19 @@
         <div class="p-topEffect__borderLeft"></div>
     </div>
     <img src="/img/cloud1.png" alt="" class="p-topEffect__cloud1">
-<!--    <img src="/img/cloud1.png" alt="">-->
-<!--    <img src="/img/cloud2.png" alt="">-->
-<!--    <img src="/img/cloud3.png" alt="">-->
+    <!--    <img src="/img/cloud1.png" alt="">-->
+    <!--    <img src="/img/cloud2.png" alt="">-->
+    <!--    <img src="/img/cloud3.png" alt="">-->
 </div>
 <div class="mjpl-page">
-    <%- include('../partials/header'); %>
+    <%- include(srcPath + 'partials/header'); %>
     <main></main>
-    <%- include('../partials/footer'); %>
+    <%- include(srcPath + 'partials/footer', {
+    next: {
+    name: "サービス内容",
+    link: "/services/"
+    }
+    }); %>
 </div>
 <script src="/assets/js/bundle.js"></script>
 </body>
