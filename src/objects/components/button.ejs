@@ -1,0 +1,36 @@
+<%
+var link = function (item) {
+%>
+    <a href="<%= item.func %>" class="mjpc-button"><%= item.name %></a>
+<% } %>
+<%
+var button = function (item) {
+%>
+    <button type="<%= item.func %>" class="mjpc-button"><%= item.name %></button>
+<% } %>
+
+<%
+if (typeof data === 'undefined') {
+    var data = [{
+        "name": "{{name}}",
+        "func": "{{func}}"
+    }];
+    var styleguide = true;
+}
+data.forEach(function (item) {
+if (styleguide) {
+%>
+    {{#each data}}
+    {{#if link}}
+    <%- link(item); %>
+    {{else}}
+    <%- button(item); %>
+    {{/if}}
+    {{/each}}
+<% } else if (item.link) {
+%>
+    <%- link(item); %>
+<% } else { %>
+    <%- button(item); %>
+<% }
+}); %>

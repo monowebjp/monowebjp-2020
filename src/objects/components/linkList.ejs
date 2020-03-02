@@ -1,22 +1,24 @@
 <ul class="mjpc-linkList mjpc-linkList--horizontal">
     <%
-        if (typeof lists === 'undefined') {
-            var lists = [
-                {
-                    "name": "リンクテキスト",
-                    "link": "/example/"
-                }, {
-                    "name": "リンクテキスト",
-                    "link": "/example/"
-                }
-            ];
-        }
-        lists.forEach(function (item) {
+    if (typeof data === 'undefined') {
+        var data = [{
+            "name": "{{ name }}",
+            "link": "{{ link }}"
+        }];
+        var styleguide = true;
+    }
+    data.forEach(function (item) {
     %>
-    <li class="mjpc-linkList__item">
-        <a href="<%= item.link %>" class="mjpc-linkList__link">
-            <span class="mjpc-linkList__text"><%= item.name %></span>
-        </a>
-    </li>
+        <% if (styleguide) { %>
+            {{#each data}}
+        <% } %>
+        <li class="mjpc-linkList__item">
+            <a href="<%= item.link %>" class="mjpc-linkList__link">
+                <span class="mjpc-linkList__text"><%= item.name %></span>
+            </a>
+        </li>
+        <% if (styleguide) { %>
+            {{/each}}
+        <% } %>
     <% }); %>
 </ul>

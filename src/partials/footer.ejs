@@ -1,21 +1,21 @@
 <footer class="mjpl-footer">
     <div class="mjpl-footer__inner">
-        <div class="mjpc-grid mjpc-grid--lower">
-            <div class="mjpc-grid__col6">
-                <%- include('../objects/components/linkList', {lists: [
+        <div class="mjpl-footer__upper">
+        </div>
+        <div class="mjpl-footer__lower">
+            <div class="mjpc-grid mjpc-grid--lower">
+                <div class="mjpc-grid__col6">
+                    <%- include('../objects/components/linkList', {data: [
                     {
-                        name: "サイトマップ",
-                        "link": "/sitemap/"
-                    },
-                    {
-                        name: "プライバシーポリシー",
-                        "link": "/privacypolicy/"
+                    name: "プライバシーポリシー",
+                    "link": "/privacypolicy/"
                     }
-                ]}); %>
-                <%- include('../objects/projects/copyright'); %>
-            </div>
-            <div class="mjpc-grid__col6">
-                <%- include('../objects/projects/share'); %>
+                    ]}); %>
+                    <%- include('../objects/projects/copyright'); %>
+                </div>
+                <div class="mjpc-grid__col6">
+                    <%- include('../objects/projects/share'); %>
+                </div>
             </div>
         </div>
     </div>

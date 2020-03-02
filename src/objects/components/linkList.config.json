@@ -1,0 +1,14 @@
+{
+  "context": {
+    "data": [
+      {
+        "name": "リンクテキスト",
+        "link": "/example/"
+      },
+      {
+        "name": "リンクテキスト",
+        "link": "/example/"
+      }
+    ]
+  }
+}
