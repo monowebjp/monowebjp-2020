@@ -23,7 +23,7 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(0, -50%);
         width: calc((322 / 1280) * 100vw);
         height: calc((322 / 832) * 100vh);
         background-image: linear-gradient(to bottom, #2970ce 0%, #82c6ff 100%);

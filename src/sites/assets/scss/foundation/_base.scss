@@ -5,3 +5,12 @@ html {
 body {
     font-size: #{(16 / $base-font-size)}rem;
 }
+
+img,
+svg {
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    line-height: 1;
+}

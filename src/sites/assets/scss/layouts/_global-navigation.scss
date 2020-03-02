@@ -38,6 +38,7 @@
     }
 
     &__icon {
+        margin: 0 auto #{(5 / $base-font-size)}rem;
         fill: $font-color;
         transition: fill .2s ease-in-out;
     }
