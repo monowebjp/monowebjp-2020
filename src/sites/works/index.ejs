@@ -1,0 +1,29 @@
+<%
+var srcPath = '../../';
+%>
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>monoweb.jp</title>
+    <%- include(srcPath + 'partials/head'); %>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<div class="mjpl-page">
+    <%- include(srcPath + 'partials/header'); %>
+    <main id="app">
+    </main>
+    <%- include(srcPath + 'partials/footer', {
+    next: {
+    name: "お問い合わせ",
+    link: "/contact/"
+    }
+    }); %>
+</div>
+<script src="/assets/js/bundle.js"></script>
+</body>
+</html>
