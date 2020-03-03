@@ -5,13 +5,13 @@
         "lv": 1,
         "tag": 1,
         "name": "ページタイトル",
-        "class": "mjpu-taCenter"
+        "utility": "mjpu-taCenter"
       },
       {
         "lv": 1,
         "tag": 2,
         "name": "セクションタイトル",
-        "class": "mjpu-taCenter"
+        "utility": "mjpu-taCenter"
       },
       {
         "lv": 2,
@@ -22,7 +22,7 @@
         "lv": 3,
         "tag": 3,
         "name": "中見出しタイトル",
-        "class": "mjpu-taCenter"
+        "utility": "mjpu-taCenter"
       }
     ]
   }

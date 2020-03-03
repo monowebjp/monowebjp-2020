@@ -4,7 +4,7 @@ if (typeof data === 'undefined') {
         "lv": "{{lv}}",
         "tag": "{{tag}}",
         "name": "{{name}}",
-        "class": "{{class}}"
+        "utility": "{{utility}}"
     }]
 
     var styleguide = true;
@@ -14,7 +14,7 @@ if (styleguide) {
 %>
     {{#each data}}
 <% } %>
-<h<%= item.tag %> class="mjpc-heading mjpc-heading--lv<%= item.lv %> <%= item.class %>"><%= item.name %></h<%= item.tag %>>
+<h<%= item.tag %> class="mjpc-heading mjpc-heading--lv<%= item.lv %> <%= item.utility %>"><%= item.name %></h<%= item.tag %>>
 <% if (styleguide) { %>
     {{/each}}
 <% } %>
