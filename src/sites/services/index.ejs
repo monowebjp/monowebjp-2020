@@ -37,13 +37,15 @@ var srcPath = '../../';
                 </div>
             </div>
         </div>
-        <p class="mjpc-paragraph mjpu-taCenter">法人の方・個人の方問わず承っております、<br>
-            まずはお気軽にご相談ください。</p>
-        <%- include(srcPath + 'objects/components/button', {data: [ {
-        link: true,
-        name: 'サイト制作のご相談はこちら',
-        func: '/contact/'
-        }]}) %>
+        <section class="mjpl-conversion">
+            <p class="mjpc-paragraph mjpu-taCenter">法人の方・個人の方問わず承っております、<br>
+                まずはお気軽にご相談ください。</p>
+            <%- include(srcPath + 'objects/components/button', {data: [ {
+            link: true,
+            name: 'サイト制作のご相談はこちら',
+            func: '/contact/'
+            }]}) %>
+        </section>
         <h2 class="mjpc-heading mjpc-heading--lv1 mjpu-taCenter">同業制作会社・フリーランスの方へ</h2>
         <p class="mjpc-paragraph mjpu-fsS mjpu-taCenter">同業の方からのご依頼もお受けしております。<br>
             お手伝いできそうなことがありましたらお気軽にご相談ください。</p>
@@ -67,17 +69,19 @@ var srcPath = '../../';
         <p class="mjpc-paragraph">
             Webサイト、Webアプリケーションに関するデザインであればPC,スマートフォン問わず一通り対応可能です。ただし、間接的なご依頼の場合、デザインの決定が難しくなりますので、ベースと鳴るデザイン、トーン&マナーがFIXしたあとにご依頼いただく形が安全です。
         </p>
-        <p class="mjpc-paragraph mjpu-taCenter">
-            法人の方・個人の方問わず承っております、<br>
-            まずはお気軽にご相談ください。
-        </p>
-        <%- include(srcPath + 'objects/components/button', {data: [
-        {
-        link: true,
-        name: 'サイト制作のご相談はこちら',
-        func: 'contact'
-        }
-        ]}); %>
+        <section class="mjpl-conversion">
+            <p class="mjpc-paragraph mjpu-taCenter">
+                法人の方・個人の方問わず承っております、<br>
+                まずはお気軽にご相談ください。
+            </p>
+            <%- include(srcPath + 'objects/components/button', {data: [
+            {
+            link: true,
+            name: 'サイト制作のご相談はこちら',
+            func: 'contact'
+            }
+            ]}); %>
+        </section>
     </main>
     <%- include(srcPath + 'partials/footer', {
     next: {
