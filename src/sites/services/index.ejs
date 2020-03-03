@@ -16,10 +16,37 @@ var srcPath = '../../';
 <div class="mjpl-page">
     <%- include(srcPath + 'partials/header'); %>
     <main id="app">
-        <div class="mjpc-sectionTitle">
-            <h1 class="mjpc-sectionTitle__title">サービス内容</h1>
-            <p class="mjpc-sectionTitle__paragraph">主にお受けしていること</p>
+        <h1 class="mjpc-heading mjpc-heading--lv1 mjpu-taCenter">サービス内容</h1>
+        <p class="mjpc-paragraph mjpu-fsS mjpu-taCenter">主にお受けしていること</p>
+        <div class="mjpc-grid">
+            <div class="mjpc-grid__inner">
+                <div class="mjpc-grid__col4">
+                    <img src="/img/dummy-600x400.png" alt="">
+                    <h2 class="mjpc-heading mjpc-heading--lv3 mjpu-taCenter">サイト設計</h2>
+                    <p>お客様のご要望やコンセプトを踏まえながら、閲覧者に使いやすいWebサイトを設計します。PC、スマートフォンそれぞれの特徴や利用状況も併せて調査・検討いたします。サイトの技術的なご相談にも対応しております。</p>
+                </div>
+                <div class="mjpc-grid__col4">
+                    <img src="/img/dummy-600x400.png" alt="">
+                    <h2 class="mjpc-heading mjpc-heading--lv3 mjpu-taCenter">デザイン</h2>
+                    <p>設計内容からトップページやナビゲーションメニューなど、全体のUIをデザインいたします。また各ページのコンテンツ素材制作、タイポグラフィを必要とするバナーなど、細部のデザインにも対応いたします。</p>
+                </div>
+                <div class="mjpc-grid__col4">
+                    <img src="/img/dummy-600x400.png" alt="">
+                    <h2 class="mjpc-heading mjpc-heading--lv3 mjpu-taCenter">実装</h2>
+                    <p>デザインを変化させるレスポンシブ対応や、CSSによる表現の幅が広がったことで、デザインとコーディングの境界線がなくなっています。一貫して対応することで、効率よくWebサイトを構築できます。</p>
+                </div>
+            </div>
         </div>
+        <p class="mjpc-paragraph mjpu-taCenter">法人の方・個人の方問わず承っております、<br>
+            まずはお気軽にご相談ください。</p>
+        <%- include(srcPath + 'objects/components/button', {data: [ {
+        link: true,
+        name: 'サイト制作のご相談はこちら',
+        func: '/contact/'
+        }]}) %>
+        <h2 class="mjpc-heading mjpc-heading--lv1 mjpu-taCenter">同業制作会社・フリーランスの方へ</h2>
+        <p class="mjpc-paragraph mjpu-fsS mjpu-taCenter">同業の方からのご依頼もお受けしております。<br>
+            お手伝いできそうなことがありましたらお気軽にご相談ください。</p>
     </main>
     <%- include(srcPath + 'partials/footer', {
     next: {

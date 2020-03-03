@@ -4,6 +4,7 @@ html {
 
 body {
     font-size: #{(16 / $base-font-size)}rem;
+    color: $font-color;
 }
 
 img,

@@ -1,0 +1,13 @@
+.mjpc-heading {
+    &--lv1 {
+        margin: #{(65 / $base-font-size)}rem auto #{(15 / $base-font-size)}rem;
+        font-size: #{(24 / $base-font-size)}rem;
+        letter-spacing: .12em;
+        text-decoration: .12em;
+    }
+
+    &--lv3 {
+        font-size: #{(16 / $base-font-size)}rem;
+        margin: #{(20 / $base-font-size)}rem auto;
+    }
+}
