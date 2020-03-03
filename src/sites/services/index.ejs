@@ -23,17 +23,17 @@ var srcPath = '../../';
                 <div class="mjpc-grid__col4">
                     <img src="/img/dummy-600x400.png" alt="">
                     <h2 class="mjpc-heading mjpc-heading--lv3 mjpu-taCenter">サイト設計</h2>
-                    <p>お客様のご要望やコンセプトを踏まえながら、閲覧者に使いやすいWebサイトを設計します。PC、スマートフォンそれぞれの特徴や利用状況も併せて調査・検討いたします。サイトの技術的なご相談にも対応しております。</p>
+                    <p class="mjpc-paragraph">お客様のご要望やコンセプトを踏まえながら、閲覧者に使いやすいWebサイトを設計します。PC、スマートフォンそれぞれの特徴や利用状況も併せて調査・検討いたします。サイトの技術的なご相談にも対応しております。</p>
                 </div>
                 <div class="mjpc-grid__col4">
                     <img src="/img/dummy-600x400.png" alt="">
                     <h2 class="mjpc-heading mjpc-heading--lv3 mjpu-taCenter">デザイン</h2>
-                    <p>設計内容からトップページやナビゲーションメニューなど、全体のUIをデザインいたします。また各ページのコンテンツ素材制作、タイポグラフィを必要とするバナーなど、細部のデザインにも対応いたします。</p>
+                    <p class="mjpc-paragraph">設計内容からトップページやナビゲーションメニューなど、全体のUIをデザインいたします。また各ページのコンテンツ素材制作、タイポグラフィを必要とするバナーなど、細部のデザインにも対応いたします。</p>
                 </div>
                 <div class="mjpc-grid__col4">
                     <img src="/img/dummy-600x400.png" alt="">
                     <h2 class="mjpc-heading mjpc-heading--lv3 mjpu-taCenter">実装</h2>
-                    <p>デザインを変化させるレスポンシブ対応や、CSSによる表現の幅が広がったことで、デザインとコーディングの境界線がなくなっています。一貫して対応することで、効率よくWebサイトを構築できます。</p>
+                    <p class="mjpc-paragraph">デザインを変化させるレスポンシブ対応や、CSSによる表現の幅が広がったことで、デザインとコーディングの境界線がなくなっています。一貫して対応することで、効率よくWebサイトを構築できます。</p>
                 </div>
             </div>
         </div>
@@ -47,6 +47,37 @@ var srcPath = '../../';
         <h2 class="mjpc-heading mjpc-heading--lv1 mjpu-taCenter">同業制作会社・フリーランスの方へ</h2>
         <p class="mjpc-paragraph mjpu-fsS mjpu-taCenter">同業の方からのご依頼もお受けしております。<br>
             お手伝いできそうなことがありましたらお気軽にご相談ください。</p>
+        <h3 class="mjpc-heading mjpc-heading--lv2">フロントエンド</h3>
+        <p class="mjpc-paragraph">
+            HTML, CSS, Javascript, PHP, Ruby, Python等であれば対応可能です。API、データベース連携等も承ります。既にデザインがある状態のモックアップやプロトタイプづくりから簡単な修正まで承れます。基本的な作業スタンス、チェックブラウザにつきましては、コーディングポリシーを御覧ください。また、合わせて欲しいルールなどがある場合はご相談も可能です。
+        </p>
+        <h3 class="mjpc-heading mjpc-heading--lv2">バックエンド</h3>
+        <p class="mjpc-paragraph">
+            Webサイト、Webアプリケーションに関するデザインであればPC,スマートフォン問わず一通り対応可能です。ただし、間接的なご依頼の場合、デザインの決定が難しくなりますので、ベースと鳴るデザイン、トーン&マナーがFIXしたあとにご依頼いただく形が安全です。
+        </p>
+        <h3 class="mjpc-heading mjpc-heading--lv2">デザイン</h3>
+        <p class="mjpc-paragraph">
+            Webサイト、Webアプリケーションに関するデザインであればPC,スマートフォン問わず一通り対応可能です。ただし、間接的なご依頼の場合、デザインの決定が難しくなりますので、ベースと鳴るデザイン、トーン&マナーがFIXしたあとにご依頼いただく形が安全です。
+        </p>
+        <h3 class="mjpc-heading mjpc-heading--lv2">CMS</h3>
+        <p class="mjpc-paragraph">
+            Webサイト、Webアプリケーションに関するデザインであればPC,スマートフォン問わず一通り対応可能です。ただし、間接的なご依頼の場合、デザインの決定が難しくなりますので、ベースと鳴るデザイン、トーン&マナーがFIXしたあとにご依頼いただく形が安全です。
+        </p>
+        <h3 class="mjpc-heading mjpc-heading--lv2">使用アプリケーション</h3>
+        <p class="mjpc-paragraph">
+            Webサイト、Webアプリケーションに関するデザインであればPC,スマートフォン問わず一通り対応可能です。ただし、間接的なご依頼の場合、デザインの決定が難しくなりますので、ベースと鳴るデザイン、トーン&マナーがFIXしたあとにご依頼いただく形が安全です。
+        </p>
+        <p class="mjpc-paragraph mjpu-taCenter">
+            法人の方・個人の方問わず承っております、<br>
+            まずはお気軽にご相談ください。
+        </p>
+        <%- include(srcPath + 'objects/components/button', {data: [
+        {
+        link: true,
+        name: 'サイト制作のご相談はこちら',
+        func: 'contact'
+        }
+        ]}); %>
     </main>
     <%- include(srcPath + 'partials/footer', {
     next: {

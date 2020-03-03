@@ -1,3 +1,8 @@
 .mjpc-paragraph {
     margin: 0 auto #{(25 / $base-font-size)}rem;
+    max-width: #{(1012 / $base-font-size)}rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 }

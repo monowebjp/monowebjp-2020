@@ -1,13 +1,36 @@
 .mjpc-heading {
     &--lv1 {
+        max-width: #{(1012 / $base-font-size)}rem;
         margin: #{(65 / $base-font-size)}rem auto #{(15 / $base-font-size)}rem;
         font-size: #{(24 / $base-font-size)}rem;
         letter-spacing: .12em;
         text-decoration: .12em;
     }
 
+    &--lv2 {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        max-width: #{(1012 / $base-font-size)}rem;
+        margin: #{(55 / $base-font-size)}rem auto #{(30 / $base-font-size)}rem;
+        font-size: #{(22 / $base-font-size)}rem;
+        letter-spacing: .12em;
+        text-decoration: .12em;
+        white-space: nowrap;
+
+        &::after {
+            content: '';
+            display: block;
+            margin: 0 0 0 #{(10 / $base-font-size)}rem;
+            width: 100%;
+            height: 1px;
+            background: $font-color;
+        }
+    }
+
     &--lv3 {
+        max-width: #{(1012 / $base-font-size)}rem;
         font-size: #{(16 / $base-font-size)}rem;
-        margin: #{(20 / $base-font-size)}rem auto;
+        margin: #{(20 / $base-font-size)}rem auto #{(15 / $base-font-size)}rem;
     }
 }

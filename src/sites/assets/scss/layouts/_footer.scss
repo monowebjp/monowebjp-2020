@@ -1,6 +1,8 @@
 .mjpl-footer {
     $this: &;
+    margin: #{(95 / $base-font-size)}rem auto 0;
     padding: 0 #{(20 / $base-font-size)}rem 10px;
+    width: 100%;
     background: left 50% bottom 5px repeat-x url('/assets/img/footer-border.svg');
 
     &__inner {
