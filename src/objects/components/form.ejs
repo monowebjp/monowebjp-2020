@@ -1,12 +1,12 @@
 <%
 var input = function (item) {
 %>
-    <input type="<%= item.type %>" placeholder="<%= item.placeholder %>" name="" id="">
+    <input type="<%= item.type %>" placeholder="<%= item.placeholder %>" name="" id="" class="mjpc-form__input">
 <% } %>
 <%
 var textarea = function (item) {
 %>
-    <textarea name="" id="" cols="30" rows="10"><%= item.placeholder %></textarea>
+    <textarea name="" id="" cols="30" rows="10" class="mjpc-form__textarea"><%= item.placeholder %></textarea>
 <% } %>
 <%
 if (typeof data === 'undefined') {
@@ -19,15 +19,15 @@ if (typeof data === 'undefined') {
     var styleguide = true;
 }
 %>
-<form action="<%= action %>">
+<form action="<%= action %>" class="mjpc-form">
     <%
     data.forEach(function (item) {
     %>
         <% if (styleguide) { %>
             {{#each data}}
         <% } %>
-        <label>
-            <span><%= item.name %></span>
+        <label class="mjpc-form__label">
+            <span class="mjpc-form__text"><%= item.name %></span>
             <% if (styleguide) { %>
                 {{#if textarea}}
                 <%- textarea(item); %>
