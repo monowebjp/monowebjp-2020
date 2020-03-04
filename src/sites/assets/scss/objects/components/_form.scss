@@ -20,5 +20,7 @@
     &__textarea {
         display: block;
         width: 100%;
+        padding: #{(5 / $base-font-size)}rem #{(10 / $base-font-size)}rem;
+        border: 1px solid #999;
     }
 }
