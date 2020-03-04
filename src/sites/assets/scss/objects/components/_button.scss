@@ -8,4 +8,8 @@
     text-decoration: none;
     text-align: center;
     color: $primary-color;
+
+    &:hover {
+        cursor: pointer;
+    }
 }

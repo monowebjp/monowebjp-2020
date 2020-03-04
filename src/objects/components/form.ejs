@@ -1,12 +1,26 @@
 <%
 var input = function (item) {
 %>
-    <input type="<%= item.type %>" placeholder="<%= item.placeholder %>" name="" id="" class="mjpc-form__input"<%= styleguide ? item.required : item.required ? ' required' : ''; %>>
+    <input
+            type="<%= item.type %>"
+            placeholder="<%= item.placeholder %>"
+            name=""
+            id=""
+            class="mjpc-form__input"
+            <%= styleguide ? '{{#if required}} required{{/if}}' : item.required ? ' required' : ''; %>
+    >
 <% } %>
 <%
 var textarea = function (item) {
 %>
-    <textarea name="" id="" cols="30" rows="10" class="mjpc-form__textarea"<%= styleguide ? item.required : item.required ? ' required' : ''; %>><%= item.placeholder %></textarea>
+    <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            class="mjpc-form__textarea"
+            <%= styleguide ? '{{#if required}} required{{/if}}' : item.required ? ' required' : ''; %>
+    ><%= item.placeholder %></textarea>
 <% } %>
 <%
 if (typeof data === 'undefined') {
@@ -20,7 +34,7 @@ if (typeof data === 'undefined') {
     var styleguide = true;
 }
 %>
-<form action="<%= action %>" class="mjpc-form">
+<form action="<%= action %>" class="mjpc-form" novalidate>
     <%
     data.forEach(function (item) {
     %>
