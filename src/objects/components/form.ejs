@@ -1,0 +1,56 @@
+<%
+var input = function (item) {
+%>
+    <input type="<%= item.type %>" placeholder="<%= item.placeholder %>" name="" id="">
+<% } %>
+<%
+var textarea = function (item) {
+%>
+    <textarea name="" id="" cols="30" rows="10"><%= item.placeholder %></textarea>
+<% } %>
+<%
+if (typeof data === 'undefined') {
+    var data = [{
+        "name": "{{name}}",
+        "type": "{{type}}",
+        "placeholder": "{{placeholder}}"
+    }];
+    var action = '{{action}}';
+    var styleguide = true;
+}
+%>
+<form action="<%= action %>">
+    <%
+    data.forEach(function (item) {
+    %>
+        <% if (styleguide) { %>
+            {{#each data}}
+        <% } %>
+        <label>
+            <span><%= item.name %></span>
+            <% if (styleguide) { %>
+                {{#if textarea}}
+                <%- textarea(item); %>
+                {{else}}
+                <%- input(item); %>
+                {{/if}}
+            <% } else { %>
+                <% if (item.textarea) { %>
+                    <%- textarea(item); %>
+                <% } else { %>
+                    <%- input(item); %>
+                <% } %>
+            <% } %>
+        </label>
+        <% if (styleguide) { %>
+            {{/each}}
+        <% } %>
+    <% }); %>
+    <%- include('./button', {data: [
+    {
+    link: false,
+    name: '送信',
+    func: 'submit'
+    }
+    ]}); %>
+</form>
