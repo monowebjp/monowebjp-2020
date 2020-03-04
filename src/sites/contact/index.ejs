@@ -17,6 +17,27 @@ var srcPath = '../../';
     <%- include(srcPath + 'partials/header'); %>
     <div class="mjpl-content">
         <main id="app">
+            <form action="">
+                <label for="">
+                    <span>法人名・個人名</span>
+                    <input type="text" name="" id="">
+                </label>
+                <label for="">
+                    <span>メールアドレス</span>
+                    <input type="email" name="" id="">
+                </label>
+                <label for="">
+                    <span>お問い合わせ内容</span>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </label>
+                <%- include(srcPath + 'objects/components/button', {data: [
+                {
+                link: false,
+                name: '送信',
+                func: 'submit'
+                }
+                ]}); %>
+            </form>
         </main>
     </div>
     <%- include(srcPath + 'partials/footer', {

@@ -2,6 +2,7 @@
     margin: 0 auto #{(20 / $base-font-size)}rem;
     padding: #{(12 / $base-font-size)}rem #{(10 / $base-font-size)}rem;
     display: block;
+    width: 100%;
     max-width: #{(324 / $base-font-size)}rem;
     border: 1px solid $primary-color;
     text-decoration: none;
