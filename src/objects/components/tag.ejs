@@ -1,0 +1,22 @@
+<ul class="mjpc-tag">
+    <%
+    if (typeof data === 'undefined') {
+        var data = [{
+            "name": "{{ name }}"
+        }];
+        var styleguide = true;
+    }
+    data.forEach(function (item, key) {
+    %>
+        <% if (styleguide) { %>
+            {{#each data}}
+        <% } %>
+        <li class="mjpc-tag__item">
+            <input type="checkbox" name="mjplTag" id="mjpIdTag<%= styleguide ? '{{@index}}' : key; %>" class="mjpc-tag__input">
+            <label for="mjpIdTag<%= styleguide ? '{{@index}}' : key; %>" class="mjpc-tag__label"><%= item.name %></label>
+        </li>
+        <% if (styleguide) { %>
+            {{/each}}
+        <% } %>
+    <% }); %>
+</ul>

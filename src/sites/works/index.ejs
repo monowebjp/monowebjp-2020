@@ -15,8 +15,30 @@ var srcPath = '../../';
 <body>
 <div class="mjpl-page">
     <%- include(srcPath + 'partials/header'); %>
-    <main id="app">
-    </main>
+    <div class="mjpl-content">
+        <main id="app">
+            <%- include(srcPath + 'objects/components/heading', {data: [{
+            lv: 1,
+            tag: 1,
+            name: '制作実績',
+            utility: 'mjpu-taCenter'
+            }]}); %>
+            <p class="mjpc-paragraph mjpu-fsS mjpu-taCenter">クライアント名は伏せさせていただいております。</p>
+            <%- include(srcPath + 'objects/components/tag', {data: [
+            {
+            name: 'Webデザイン'
+            }, {
+            name: 'フロントエンド構築'
+            }, {
+            name: 'バックエンド構築'
+            }, {
+            name: 'ロゴデザイン'
+            }, {
+            name: '名刺デザイン'
+            }
+            ]}); %>
+        </main>
+    </div>
     <%- include(srcPath + 'partials/footer', {
     next: {
     name: "お問い合わせ",
