@@ -1,22 +1,22 @@
+// BlueBack
+// contents
 .mjpp-topEffect {
     $this: &;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: -1;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(to bottom, #2970ce 0%, #82c6ff 100%);
-    //opacity: 0;
-    overflow: hidden;
+    animation: topEffect 4s cubic-bezier(.445, .05, .55, .95) 2s forwards;
 
     &__mask {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         width: 100vw;
         height: 100vh;
-        animation: topEffectMask 4s  cubic-bezier(.445, .05, .55, .95) 2s forwards;
+        background: linear-gradient(to bottom, #2970ce 0%, #82c6ff 100%);
+        animation: topEffectMask 4s cubic-bezier(.445, .05, .55, .95) 2s forwards;
     }
 
     &__window {
@@ -31,56 +31,132 @@
         background-position: 50% 50%;
         background-repeat: no-repeat;
 
-        #{$this}__borderTop {
+        #{$this}__borderTop,
+        #{$this}__borderRight,
+        #{$this}__borderBottom,
+        #{$this}__borderLeft,
+        #{$this}__borderTopInline,
+        #{$this}__borderRightInline,
+        #{$this}__borderBottomInline,
+        #{$this}__borderLeftInline {
             position: absolute;
+            background: $mono-light-color;
+        }
+
+        #{$this}__borderTop {
             top: 0;
             left: 0;
             height: 1px;
-            background: $mono-light-color;
             animation: borderWidth .4s ease 0s forwards;
         }
 
         #{$this}__borderRight {
-            position: absolute;
             top: 0;
             right: 0;
             width: 1px;
-            background: $mono-light-color;
             animation: borderHeight .4s ease .4s forwards;
         }
 
         #{$this}__borderBottom {
-            position: absolute;
             right: 0;
             bottom: 0;
             height: 1px;
-            background: $mono-light-color;
             animation: borderWidth .4s ease .8s forwards;
         }
 
         #{$this}__borderLeft {
-            position: absolute;
             bottom: 0;
             left: 0;
             width: 1px;
-            background: $mono-light-color;
             animation: borderHeight .4s ease 1.2s forwards;
+        }
+
+        #{$this}__borderTopInline {
+            top: 10px;
+            left: 10px;
+            height: 3px;
+            animation: borderWidthInline .4s ease 0s forwards;
+        }
+
+        #{$this}__borderRightInline {
+            top: 10px;
+            right: 10px;
+            width: 3px;
+            animation: borderHeightInline .4s ease .4s forwards;
+        }
+
+        #{$this}__borderBottomInline {
+            right: 10px;
+            bottom: 10px;
+            height: 3px;
+            animation: borderWidthInline .4s ease .8s forwards;
+        }
+
+        #{$this}__borderLeftInline {
+            bottom: 10px;
+            left: 10px;
+            width: 3px;
+            animation: borderHeightInline .4s ease 1.2s forwards;
         }
     }
 
     &__cloud1 {
         position: absolute;
-        animation: cloud1 30s cubic-bezier(.445, .05, .55, .95) 0s infinite;
+        top: 10%;
+        left: 20%;
+        animation: cloud 60s linear 0s infinite;
+    }
+
+    &__cloud2 {
+        position: absolute;
+        top: 60%;
+        left: 40%;
+        animation: cloud 45s linear 0s infinite;
+    }
+
+    &__cloud3 {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        animation: cloud 30s linear 0s infinite;
+    }
+
+    &__cloud4 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform-origin: 0 50%;
+        //animation: cloud4 60s linear 0s infinite;
+    }
+}
+
+@keyframes topEffect {
+    0% {
+        z-index: 0;
+    }
+
+    99% {
+        z-index: 0;
+    }
+
+    100% {
+        z-index: -1;
     }
 }
 
 @keyframes topEffectMask {
     0% {
-        background: rgba($mono-light-color, 0);
+        z-index: 0;
+        opacity: 1;
+    }
+
+    99% {
+        z-index: 0;
     }
 
     100% {
-        background: rgba($mono-light-color, 1);
+        z-index: -1;
+        opacity: 0;
     }
 }
 
@@ -104,12 +180,42 @@
     }
 }
 
-@keyframes cloud1 {
+@keyframes borderWidthInline {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: calc(100% - 23px);
+    }
+}
+
+@keyframes borderHeightInline {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: calc(100% - 23px);
+    }
+}
+
+@keyframes cloud {
     0% {
         transform: translateX(-100%);
     }
 
     100% {
-        transform: translateX(100vw);
+        transform: translateX(70vw);
+    }
+}
+
+@keyframes cloud4 {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(-360deg);
     }
 }

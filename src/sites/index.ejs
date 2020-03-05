@@ -13,19 +13,6 @@ var srcPath = '../';
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-<div class="mjpp-topEffect" id="topEffect">
-    <div class="mjpp-topEffect__mask"></div>
-    <div class="mjpp-topEffect__window">
-        <div class="mjpp-topEffect__borderTop"></div>
-        <div class="mjpp-topEffect__borderRight"></div>
-        <div class="mjpp-topEffect__borderBottom"></div>
-        <div class="mjpp-topEffect__borderLeft"></div>
-    </div>
-    <img src="/img/cloud1.png" alt="" class="p-topEffect__cloud1">
-    <!--    <img src="/img/cloud1.png" alt="">-->
-    <!--    <img src="/img/cloud2.png" alt="">-->
-    <!--    <img src="/img/cloud3.png" alt="">-->
-</div>
 <div class="mjpl-page">
     <%- include(srcPath + 'partials/header'); %>
     <div class="mjpl-content">
@@ -50,6 +37,23 @@ var srcPath = '../';
     link: "/services/"
     }
     }); %>
+</div>
+<div class="mjpp-topEffect" id="topEffect">
+    <div class="mjpp-topEffect__mask"></div>
+    <div class="mjpp-topEffect__window">
+        <div class="mjpp-topEffect__borderTop"></div>
+        <div class="mjpp-topEffect__borderRight"></div>
+        <div class="mjpp-topEffect__borderBottom"></div>
+        <div class="mjpp-topEffect__borderLeft"></div>
+        <div class="mjpp-topEffect__borderTopInline"></div>
+        <div class="mjpp-topEffect__borderRightInline"></div>
+        <div class="mjpp-topEffect__borderBottomInline"></div>
+        <div class="mjpp-topEffect__borderLeftInline"></div>
+    </div>
+    <img src="/img/cloud1.png" alt="" class="mjpp-topEffect__cloud1">
+    <img src="/img/cloud1.png" alt="" class="mjpp-topEffect__cloud2">
+    <img src="/img/cloud1.png" alt="" class="mjpp-topEffect__cloud3">
+    <img src="/img/cloud4.png" alt="" class="mjpp-topEffect__cloud4">
 </div>
 <script src="/assets/js/bundle.js"></script>
 </body>
