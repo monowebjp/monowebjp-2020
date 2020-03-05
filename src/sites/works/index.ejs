@@ -44,6 +44,85 @@ var srcPath = '../../';
             name: 2020
             }
             ]}); %>
+            <div class="mjpp-workAccordion">
+                <button aria-expanded="true" aria-controls="workAccordionContent0" id="workAccordionTrigger0" class="mjpp-workAccordion__trigger">
+                    <span class="mjpp-workAccordion__image">
+                        <img src="/img/dummy-600x400.png" alt="">
+                    </span>
+                    <span class="mjpp-workAccordion__text">
+                        <span class="mjpp-workAccordion__title">ユーザー管理サービスUIリニューアル</span>
+                        <span class="mjpp-workAccordion__tagList">
+                            <span class="mjpp-workAccordion__tagItem">Webデザイン</span>
+                            <span class="mjpp-workAccordion__tagItem">フロントエンド構築</span>
+                            <span class="mjpp-workAccordion__tagItem">バックエンドエンド構築</span>
+                        </span>
+                        <span class="mjpp-workAccordion__description">
+                            3Dパースモデリングの集客を目的としたランディングページのデザイン。
+                        </span>
+                    </span>
+                </button>
+                <div role="region" aria-labelledby="workAccordionTrigger0" id="workAccordionContent0" class="mjpp-workAccordion__content">
+                    <div class="mjpc-grid">
+                        <div class="mjpc-grid__inner">
+                            <div class="mjpc-grid__col6">
+                                <%- include(srcPath + 'objects/components/heading', {data: [
+                                {
+                                lv: 3,
+                                tag: 3,
+                                name: 'チーム編成'
+                                }
+                                ]}); %>
+                                <dl>
+                                    <dt>ディレクター</dt>
+                                    <dd>1名</dd>
+                                </dl>
+                                <dl>
+                                    <dt>デザイナー</dt>
+                                    <dd>1名</dd>
+                                </dl>
+                                <dl>
+                                    <dt>フロントエンド開発</dt>
+                                    <dd>1名</dd>
+                                </dl>
+                                <dl>
+                                    <dt>バックエンド開発</dt>
+                                    <dd>3名</dd>
+                                </dl>
+                            </div>
+                            <div class="mjpc-grid__col6">
+                                <%- include(srcPath + 'objects/components/heading', {data: [
+                                {
+                                lv: 3,
+                                tag: 3,
+                                name: 'アプリケーション'
+                                }
+                                ]}); %>
+                                <ul>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <%- include(srcPath + 'objects/components/heading', {data: [
+                                {
+                                lv: 3,
+                                tag: 3,
+                                name: '言語・フレームワーク'
+                                }
+                                ]}); %>
+                            </div>
+                        </div>
+                    </div>
+                    <%- include(srcPath + 'objects/components/heading', {data: [
+                    {
+                    lv: 3,
+                    tag: 3,
+                    name: '概要'
+                    }
+                    ]}); %>
+                </div>
+            </div>
             <%- include(srcPath + 'objects/components/heading', {data: [
             {
             lv: 2,
