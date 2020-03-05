@@ -1,6 +1,6 @@
 .mjpc-tag {
     $this: &;
-    margin: 0 auto;
+    margin: 0 auto #{(5 / $base-font-size)}rem;
     padding: 0;
     list-style: none;
     display: flex;
@@ -19,6 +19,28 @@
             &::after {
                 content: normal;
             }
+        }
+
+        &.is-active,
+        &.is-inactive {
+            &::after {
+                content: ',';
+                color: #999;
+            }
+
+            &:last-child {
+                &::after {
+                    content: normal;
+                }
+            }
+        }
+
+        &.is-active {
+            color: $primary-color;
+        }
+
+        &.is-inactive {
+            color: #999;
         }
     }
 }

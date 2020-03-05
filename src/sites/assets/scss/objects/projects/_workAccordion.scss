@@ -7,6 +7,10 @@
         display: flex;
         flex-wrap: nowrap;
         padding: #{(30 / $base-font-size)}rem #{(20 / $base-font-size)}rem;
+
+        .mjpc-tag__label {
+            font-size: #{(12 / $base-font-size)}rem;
+        }
     }
 
     &__figure {
