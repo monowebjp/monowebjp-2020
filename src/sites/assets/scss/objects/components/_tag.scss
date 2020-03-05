@@ -1,14 +1,15 @@
 .mjpc-tag {
     $this: &;
-    margin: 0 auto;
+    margin: 0 auto #{(-5 / $base-font-size)}rem;
     padding: 0;
     list-style: none;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     max-width: #{(1022 / $base-font-size)}rem;
 
     &__item {
-        margin: 0 #{(5 / $base-font-size)}rem;
+        margin: 0 #{(5 / $base-font-size)}rem #{(5 / $base-font-size)}rem;
     }
 
     &__input {
@@ -31,6 +32,7 @@
         color: #999;
         line-height: 1;
         border-radius: 1em;
+        white-space: nowrap;
         transition: color .1s ease-in-out, background-color .1s ease-in-out;
 
         &::selection {

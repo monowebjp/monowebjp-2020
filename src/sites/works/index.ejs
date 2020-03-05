@@ -45,22 +45,28 @@ var srcPath = '../../';
             }
             ]}); %>
             <div class="mjpp-workAccordion">
-                <button aria-expanded="true" aria-controls="workAccordionContent0" id="workAccordionTrigger0" class="mjpp-workAccordion__trigger">
-                    <span class="mjpp-workAccordion__image">
+                <div aria-expanded="true" aria-controls="workAccordionContent0" id="workAccordionTrigger0" class="mjpp-workAccordion__trigger">
+                    <figure class="mjpp-workAccordion__image">
                         <img src="/img/dummy-600x400.png" alt="">
-                    </span>
-                    <span class="mjpp-workAccordion__text">
-                        <span class="mjpp-workAccordion__title">ユーザー管理サービスUIリニューアル</span>
-                        <span class="mjpp-workAccordion__tagList">
-                            <span class="mjpp-workAccordion__tagItem">Webデザイン</span>
-                            <span class="mjpp-workAccordion__tagItem">フロントエンド構築</span>
-                            <span class="mjpp-workAccordion__tagItem">バックエンドエンド構築</span>
-                        </span>
-                        <span class="mjpp-workAccordion__description">
+                    </figure>
+                    <div class="mjpp-workAccordion__text">
+                        <%- include(srcPath + 'objects/components/heading', {data: [
+                        {
+                        lv: 3,
+                        tag: 2,
+                        name: 'ユーザー管理サービスUIリニューアル'
+                        }
+                        ]}); %>
+                        <ul class="mjpp-workAccordion__tagList">
+                            <li class="mjpp-workAccordion__tagItem">Webデザイン</li>
+                            <li class="mjpp-workAccordion__tagItem">フロントエンド構築</li>
+                            <li class="mjpp-workAccordion__tagItem">バックエンドエンド構築</li>
+                        </ul>
+                        <p class="mjpc-paragraph">
                             3Dパースモデリングの集客を目的としたランディングページのデザイン。
-                        </span>
-                    </span>
-                </button>
+                        </p>
+                    </div>
+                </div>
                 <div role="region" aria-labelledby="workAccordionTrigger0" id="workAccordionContent0" class="mjpp-workAccordion__content">
                     <div class="mjpc-grid">
                         <div class="mjpc-grid__inner">
@@ -121,6 +127,9 @@ var srcPath = '../../';
                     name: '概要'
                     }
                     ]}); %>
+                    <p class="mjpc-paragraph">
+                        3Dパースモデリングの集客を目的としたランディングページのデザイン。3Dパースモデリングの集客を目的としたランディングページのデザイン。3Dパースモデリングの集客を目的としたランディングページのデザイン。
+                    </p>
                 </div>
             </div>
             <%- include(srcPath + 'objects/components/heading', {data: [
