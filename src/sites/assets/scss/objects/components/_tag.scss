@@ -33,6 +33,10 @@
         border-radius: 1em;
         transition: color .1s ease-in-out, background-color .1s ease-in-out;
 
+        &::selection {
+            background: transparent;
+        }
+
         &:hover {
             cursor: pointer;
         }
