@@ -1,46 +1,24 @@
 .mjpc-tag {
     $this: &;
-    margin: 0 auto #{(-5 / $base-font-size)}rem;
+    margin: 0 auto;
     padding: 0;
     list-style: none;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
     max-width: #{(1022 / $base-font-size)}rem;
 
     &__item {
-        margin: 0 #{(5 / $base-font-size)}rem #{(5 / $base-font-size)}rem;
-    }
+        margin: 0;
 
-    &__input {
-        display: none;
+        &::after {
+            margin: 0 #{(5 / $base-font-size)}rem 0 0;
+            content: ',';
+        }
 
-        &:checked {
-            + #{$this}__label {
-                background: $primary-color;
-                border-color: $primary-color;
-                color: $mono-light-color;
+        &:last-child {
+            &::after {
+                content: normal;
             }
-        }
-    }
-
-    &__label {
-        padding: #{(7 / $base-font-size)}rem #{(10 / $base-font-size)}rem #{(5 / $base-font-size)}rem;
-        display: block;
-        font-size: #{(12 / $base-font-size)}rem;
-        border: 1px solid #999;
-        color: #999;
-        line-height: 1;
-        border-radius: 1em;
-        white-space: nowrap;
-        transition: color .1s ease-in-out, background-color .1s ease-in-out;
-
-        &::selection {
-            background: transparent;
-        }
-
-        &:hover {
-            cursor: pointer;
         }
     }
 }

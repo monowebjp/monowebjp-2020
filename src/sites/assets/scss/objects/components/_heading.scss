@@ -32,5 +32,9 @@
         max-width: #{(1012 / $base-font-size)}rem;
         font-size: #{(16 / $base-font-size)}rem;
         margin: #{(20 / $base-font-size)}rem auto #{(15 / $base-font-size)}rem;
+
+        &:first-child {
+            margin-top: 0;
+        }
     }
 }

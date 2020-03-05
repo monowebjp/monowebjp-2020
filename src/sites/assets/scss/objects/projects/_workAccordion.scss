@@ -1,0 +1,25 @@
+.mjpp-workAccordion {
+    $this: &;
+    margin: 0 auto;
+    max-width: #{(1022 / $base-font-size)}rem;
+
+    &__trigger {
+        display: flex;
+        flex-wrap: nowrap;
+        padding: #{(30 / $base-font-size)}rem #{(20 / $base-font-size)}rem;
+    }
+
+    &__figure {
+        margin: 0;
+        width: #{(152 / $base-font-size)}rem;
+    }
+
+    &__text {
+        padding: 0 0 0 #{(20 / $base-font-size)}rem;
+        width: calc(100% - #{(152 / $base-font-size)}rem);
+    }
+
+    &__content {
+        padding: #{(30 / $base-font-size)}rem #{(20 / $base-font-size)}rem;
+    }
+}

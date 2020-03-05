@@ -1,0 +1,43 @@
+.mjpp-tabRuler {
+    &__item,
+    &__title,
+    &__description {
+        margin: 0;
+        padding: 0;
+    }
+
+    &__item {
+        margin: 0 0 #{(5 / $base-font-size)}rem;
+        display: flex;
+        justify-content: space-between;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__title,
+    &__description {
+        white-space: nowrap;
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        width: 100%;
+
+        &::after {
+            margin: 0 0 0 #{(15 / $base-font-size)}rem;
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            border-bottom: 1px dashed $font-color;
+        }
+    }
+
+    &__description {
+        margin: 0 0 0 #{(15 / $base-font-size)}rem;
+    }
+}
