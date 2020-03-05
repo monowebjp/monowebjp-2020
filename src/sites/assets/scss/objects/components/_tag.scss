@@ -43,4 +43,22 @@
             color: #999;
         }
     }
+
+    &--noSeparate {
+        #{$this}__item {
+            &::after {
+                content: normal;
+            }
+        }
+
+        #{$this}__icon {
+            display: block;
+            margin: 0 #{(5 / $base-font-size)}rem 0 0;
+
+            > img {
+                width: #{(24 / $base-font-size)}rem;
+                height: #{(24 / $base-font-size)}rem;
+            }
+        }
+    }
 }
