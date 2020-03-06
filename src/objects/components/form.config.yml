@@ -1,0 +1,18 @@
+context:
+    action: /example/
+    data:
+        -   name: 法人名・個人名
+            type: 'text'
+            placeholder: 例）山田 太郎
+            required: true
+        -   name: メールアドレス
+            type: email
+            placeholder: 例）info@example.co.jp
+            required: true
+        -   name: 内容
+            textarea: true
+            placeholder: 例）山田 太郎
+            required: true
+
+
+

@@ -1,12 +1,11 @@
-<!-- users.ejs -->
 <div>
-    <h1>{{ title }}</h1>
+    <h1><%= title %></h1>
     <ul>
-        {{#each users}}
-        <li>
-            <h2>{{ name }}</h2>
-            <p>{{ email }}</p>
-        </li>
-        {{/each}}
+        <% data.forEach(function (item) { %>
+            <li>
+                <h2><%= item.name %></h2>
+                <p><%= item.email %></p>
+            </li>
+        <% }); %>
     </ul>
 </div>

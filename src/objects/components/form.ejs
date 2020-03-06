@@ -1,65 +1,15 @@
-<%
-var input = function (item) {
-%>
-    <input
-            type="<%= item.type %>"
-            placeholder="<%= item.placeholder %>"
-            name=""
-            id=""
-            class="mjpc-form__input"
-            <%= styleguide ? '{{#if required}} required{{/if}}' : item.required ? ' required' : ''; %>
-    >
-<% } %>
-<%
-var textarea = function (item) {
-%>
-    <textarea
-            name=""
-            id=""
-            cols="30"
-            rows="10"
-            class="mjpc-form__textarea"
-            <%= styleguide ? '{{#if required}} required{{/if}}' : item.required ? ' required' : ''; %>
-    ><%= item.placeholder %></textarea>
-<% } %>
-<%
-if (typeof data === 'undefined') {
-    var data = [{
-        "name": "{{name}}",
-        "type": "{{type}}",
-        "placeholder": "{{placeholder}}",
-        "required": "{{required}}"
-    }];
-    var action = '{{action}}';
-    var styleguide = true;
-}
-%>
 <form action="<%= action %>" class="mjpc-form" novalidate>
     <%
     data.forEach(function (item) {
     %>
-        <% if (styleguide) { %>
-            {{#each data}}
-        <% } %>
         <label class="mjpc-form__label">
             <span class="mjpc-form__text"><%= item.name %></span>
-            <% if (styleguide) { %>
-                {{#if textarea}}
-                <%- textarea(item); %>
-                {{else}}
-                <%- input(item); %>
-                {{/if}}
+            <% if (item.textarea) { %>
+                <textarea name="" id="" cols="30" rows="10" class="mjpc-form__textarea"<%= item.required ? ' required' : ''; %>><%= item.placeholder %></textarea>
             <% } else { %>
-                <% if (item.textarea) { %>
-                    <%- textarea(item); %>
-                <% } else { %>
-                    <%- input(item); %>
-                <% } %>
+                <input type="<%= item.type %>" placeholder="<%= item.placeholder %>" name="" id="" class="mjpc-form__input"<%= item.required ? ' required' : ''; %>>
             <% } %>
         </label>
-        <% if (styleguide) { %>
-            {{/each}}
-        <% } %>
     <% }); %>
     <%- include('./button', {data: [
     {

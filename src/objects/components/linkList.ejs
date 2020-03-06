@@ -1,24 +1,11 @@
 <ul class="mjpc-linkList mjpc-linkList--horizontal">
     <%
-    if (typeof data === 'undefined') {
-        var data = [{
-            "name": "{{ name }}",
-            "link": "{{ link }}"
-        }];
-        var styleguide = true;
-    }
     data.forEach(function (item) {
     %>
-        <% if (styleguide) { %>
-            {{#each data}}
-        <% } %>
         <li class="mjpc-linkList__item">
             <a href="<%= item.link %>" class="mjpc-linkList__link">
                 <span class="mjpc-linkList__text"><%= item.name %></span>
             </a>
         </li>
-        <% if (styleguide) { %>
-            {{/each}}
-        <% } %>
     <% }); %>
 </ul>

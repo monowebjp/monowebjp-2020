@@ -1,22 +1,10 @@
 <ul class="mjpc-tagToggle">
     <%
-    if (typeof data === 'undefined') {
-        var data = [{
-            "name": "{{ name }}"
-        }];
-        var styleguide = true;
-    }
     data.forEach(function (item, key) {
     %>
-        <% if (styleguide) { %>
-            {{#each data}}
-        <% } %>
         <li class="mjpc-tagToggle__item">
-            <input type="checkbox" name="mjplTagToggle" id="mjpIdTagToggle<%= styleguide ? '{{@index}}' : key; %>" class="mjpc-tagToggle__input">
-            <label for="mjpIdTagToggle<%= styleguide ? '{{@index}}' : key; %>" class="mjpc-tagToggle__label"><%= item.name %></label>
+            <input type="checkbox" name="mjplTagToggle" id="mjpIdTagToggle<%= key %>" class="mjpc-tagToggle__input">
+            <label for="mjpIdTagToggle<%= key %>" class="mjpc-tagToggle__label"><%= item.name %></label>
         </li>
-        <% if (styleguide) { %>
-            {{/each}}
-        <% } %>
     <% }); %>
 </ul>
