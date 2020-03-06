@@ -21,6 +21,6 @@ fractal.components.set('path', __dirname + '/src/objects');
 fractal.docs.set('path', __dirname + '/src/docs');
 
 /* Specify a directory of static assets */
-fractal.web.set('static.path', __dirname + '/dist/assets');
+fractal.web.set('static.path', __dirname + '/dist');
 
 /* Set the static HTML build destination */
