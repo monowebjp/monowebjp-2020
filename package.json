@@ -26,8 +26,6 @@
     "prod:ejs": "html-minifier --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true --input-dir dist --output-dir dist --file-ext html",
     "prod:html": "run-s ejs prod:ejs",
     "styleguide": "fractal start --sync",
-    "styleguide:ejs": "ejs-cli -b src/objects/ \"**/*.ejs\" -o styleguide/ --options ejs.config.json",
-    "styleguide:copy": "rsync -av src/objects/* styleguide --exclude \"*.ejs\"",
     "js": "run-s js:lint js:ts",
     "js:ts": "webpack",
     "js:lint": "eslint src/sites/assets/js -c .eslintrc.json --ext ts,tsx; exit 0",
@@ -42,6 +40,7 @@
     "update": "ncu -u"
   },
   "devDependencies": {
+    "@frctl/consolidate": "^1.0.1",
     "@frctl/fractal": "^1.2.1",
     "@typescript-eslint/eslint-plugin": "^2.19.0",
     "@typescript-eslint/parser": "^2.19.0",
@@ -50,6 +49,7 @@
     "chokidar-cli": "^2.1.0",
     "css-mqpacker": "^7.0.0",
     "csswring": "^7.0.0",
+    "ejs": "^3.0.1",
     "ejs-cli": "^2.1.1",
     "eslint": "^6.8.0",
     "html-minifier": "^4.0.0",

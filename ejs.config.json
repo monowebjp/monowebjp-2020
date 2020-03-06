@@ -1,1 +1,17 @@
-{}
+{
+  "sample": {
+    "heading": [
+      {
+        "lv": "{{lv}}",
+        "tag": "{{tag}}",
+        "name": "{{name}}",
+        "utility": "{{utility}}"
+      }
+    ],
+    "icon": [
+      {
+        "name": "{{name}}"
+      }
+    ]
+  }
+}
