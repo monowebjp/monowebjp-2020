@@ -1,6 +1,10 @@
 context:
-    data:
-        -   name: pen
-        -   name: laptop
-        -   name: htmltag
-        -   name: tag
+    datas:
+        -   items:
+                -   name: pen
+        -   items:
+                -   name: laptop
+        -   items:
+                -   name: htmltag
+        -   items:
+                -   name: tag

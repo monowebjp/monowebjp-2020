@@ -8,49 +8,20 @@
     max-width: #{(1022 / $base-font-size)}rem;
 
     &__item {
-        margin: 0;
+        margin: 0 #{(5 / $base-font-size)}rem 0 0;
+    }
 
-        &::after {
-            margin: 0 #{(5 / $base-font-size)}rem 0 0;
-            content: ',';
-        }
-
-        &:last-child {
-            &::after {
-                content: normal;
-            }
-        }
-
-        &.is-active,
-        &.is-inactive {
-            &::after {
-                content: ',';
-                color: #999;
-            }
-
-            &:last-child {
-                &::after {
-                    content: normal;
-                }
-            }
-        }
-
-        &.is-active {
-            color: $primary-color;
-        }
-
-        &.is-inactive {
+    &--status {
+        #{$this}__label {
             color: #999;
+
+            &.is-active {
+                color: $primary-color;
+            }
         }
     }
 
     &--noSeparate {
-        #{$this}__item {
-            &::after {
-                content: normal;
-            }
-        }
-
         #{$this}__icon {
             display: block;
             margin: 0 #{(5 / $base-font-size)}rem 0 0;
@@ -58,6 +29,47 @@
             > img {
                 width: #{(24 / $base-font-size)}rem;
                 height: #{(24 / $base-font-size)}rem;
+            }
+        }
+    }
+
+    &--toggle {
+        margin: 0 auto #{(-5 / $base-font-size)}rem;
+        justify-content: center;
+
+        #{$this}__item {
+            margin: 0 #{(5 / $base-font-size)}rem #{(5 / $base-font-size)}rem;
+        }
+
+        #{$this}__input {
+            display: none;
+
+            &:checked {
+                + #{$this}__label {
+                    background: $primary-color;
+                    border-color: $primary-color;
+                    color: $mono-light-color;
+                }
+            }
+        }
+
+        #{$this}__label {
+            padding: #{(7 / $base-font-size)}rem #{(10 / $base-font-size)}rem #{(5 / $base-font-size)}rem;
+            display: block;
+            font-size: #{(12 / $base-font-size)}rem;
+            border: 1px solid #999;
+            color: #999;
+            line-height: 1;
+            border-radius: 1em;
+            white-space: nowrap;
+            transition: color .1s ease-in-out, background-color .1s ease-in-out;
+
+            &::selection {
+                background: transparent;
+            }
+
+            &:hover {
+                cursor: pointer;
             }
         }
     }

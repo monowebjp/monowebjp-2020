@@ -1,21 +1,27 @@
-<form action="<%= action %>" class="mjpc-form" novalidate>
-    <%
-    data.forEach(function (item) {
-    %>
-        <label class="mjpc-form__label">
-            <span class="mjpc-form__text"><%= item.name %></span>
-            <% if (item.textarea) { %>
-                <textarea name="" id="" cols="30" rows="10" class="mjpc-form__textarea"<%= item.required ? ' required' : ''; %>><%= item.placeholder %></textarea>
-            <% } else { %>
-                <input type="<%= item.type %>" placeholder="<%= item.placeholder %>" name="" id="" class="mjpc-form__input"<%= item.required ? ' required' : ''; %>>
-            <% } %>
-        </label>
-    <% }); %>
-    <%- include('./button', {data: [
-    {
-    link: false,
-    name: '送信',
-    func: 'submit'
-    }
-    ]}); %>
-</form>
+<%
+datas.forEach(function (data) {
+%>
+    <form action="<%= data.action %>" class="mjpc-form" novalidate>
+        <%
+        data.items.forEach(function (item) {
+        %>
+            <label class="mjpc-form__label">
+                <span class="mjpc-form__text"><%= item.name %></span>
+                <% if (item.textarea) { %>
+                    <textarea name="" id="" cols="30" rows="10" class="mjpc-form__textarea"<%= item.required ? ' required' : ''; %>><%= item.placeholder %></textarea>
+                <% } else { %>
+                    <input type="<%= item.type %>" placeholder="<%= item.placeholder %>" name="" id="" class="mjpc-form__input"<%= item.required ? ' required' : ''; %>>
+                <% } %>
+            </label>
+        <% }); %>
+        <%- include('./button', {datas: [
+        {
+        items: [{
+        link: false,
+        name: '送信',
+        func: 'submit'
+        }]
+        }
+        ]}); %>
+    </form>
+<% }); %>

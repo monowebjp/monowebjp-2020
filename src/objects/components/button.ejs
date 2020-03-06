@@ -1,9 +1,13 @@
 <%
-data.forEach(function (item) {
+datas.forEach(function (data) {
 %>
-    <% if (item.link) { %>
-        <a href="<%= item.func %>" class="mjpc-button"><%= item.name %></a>
-    <% } else { %>
-        <button type="<%= item.func %>" class="mjpc-button"><%= item.name %></button>
-<% }
-}); %>
+    <%
+    data.items.forEach(function (item) {
+    %>
+        <% if (item.link) { %>
+            <a href="<%= item.func %>" class="mjpc-button"><%= item.name %></a>
+        <% } else { %>
+            <button type="<%= item.func %>" class="mjpc-button"><%= item.name %></button>
+    <% }
+    }); %>
+<% }); %>

@@ -1,7 +1,8 @@
 context:
-    title: Our users
-    data:
-        -   name: Masumi Nakamura
-            email: mickey@mouse.com
-        -   name: Daffy Duck
-            email: daffy@duck.com
+    datas:
+        -   title: Our users
+            items:
+                -   name: Masumi Nakamura
+                    email: mickey@mouse.com
+                -   name: Daffy Duck
+                    email: daffy@duck.com

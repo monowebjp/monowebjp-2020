@@ -1,11 +1,13 @@
 <footer class="mjpl-footer">
     <div class="mjpl-footer__inner">
         <div class="mjpl-footer__upper">
-            <%- include('../objects/components/button', {data: [
+            <%- include('../objects/components/button', {datas: [
             {
+            items: [{
             link: true,
             name: next.name,
             func: next.link
+            }]
             }
             ]}); %>
         </div>
@@ -13,12 +15,12 @@
             <div class="mjpc-grid mjpc-grid--lower">
                 <div class="mjpc-grid__inner">
                     <div class="mjpc-grid__col6">
-                        <%- include('../objects/components/linkList', {data: [
-                        {
+                        <%- include('../objects/components/linkList', {datas: [{
+                        items: [{
                         name: "プライバシーポリシー",
                         link: "/privacypolicy/"
-                        }
-                        ]}); %>
+                        }]
+                        }]}); %>
                         <%- include('../objects/projects/copyright'); %>
                     </div>
                     <div class="mjpc-grid__col6">

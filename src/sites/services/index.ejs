@@ -17,42 +17,50 @@ var srcPath = '../../';
     <%- include(srcPath + 'partials/header'); %>
     <div class="mjpl-content">
         <main id="app">
-            <%- include(srcPath + 'objects/components/heading', {data: [{
+            <%- include(srcPath + 'objects/components/heading', {datas: [{
+            items: [{
             lv: 1,
             tag: 1,
             name: 'サービス内容',
             utility: 'mjpu-taCenter'
+            }]
             }]}); %>
             <p class="mjpc-paragraph mjpu-fsS mjpu-taCenter">主にお受けしていること</p>
             <div class="mjpc-grid">
                 <div class="mjpc-grid__inner">
                     <div class="mjpc-grid__col4">
                         <img src="/img/dummy-600x400.png" alt="">
-                        <%- include(srcPath + 'objects/components/heading', {data: [{
+                        <%- include(srcPath + 'objects/components/heading', {datas: [{
+                        items: [{
                         lv: 3,
                         tag: 2,
                         name: 'サイト設計',
                         utility: 'mjpu-taCenter'
+                        }]
                         }]}); %>
                         <p class="mjpc-paragraph">お客様のご要望やコンセプトを踏まえながら、閲覧者に使いやすいWebサイトを設計します。PC、スマートフォンそれぞれの特徴や利用状況も併せて調査・検討いたします。サイトの技術的なご相談にも対応しております。</p>
                     </div>
                     <div class="mjpc-grid__col4">
                         <img src="/img/dummy-600x400.png" alt="">
-                        <%- include(srcPath + 'objects/components/heading', {data: [{
+                        <%- include(srcPath + 'objects/components/heading', {datas: [{
+                        items: [{
                         lv: 3,
                         tag: 2,
                         name: 'デザイン',
                         utility: 'mjpu-taCenter'
+                        }]
                         }]}); %>
                         <p class="mjpc-paragraph">設計内容からトップページやナビゲーションメニューなど、全体のUIをデザインいたします。また各ページのコンテンツ素材制作、タイポグラフィを必要とするバナーなど、細部のデザインにも対応いたします。</p>
                     </div>
                     <div class="mjpc-grid__col4">
                         <img src="/img/dummy-600x400.png" alt="">
-                        <%- include(srcPath + 'objects/components/heading', {data: [{
+                        <%- include(srcPath + 'objects/components/heading', {datas: [{
+                        items: [{
                         lv: 3,
                         tag: 2,
                         name: '実装',
                         utility: 'mjpu-taCenter'
+                        }]
                         }]}); %>
                         <p class="mjpc-paragraph">デザインを変化させるレスポンシブ対応や、CSSによる表現の幅が広がったことで、デザインとコーディングの境界線がなくなっています。一貫して対応することで、効率よくWebサイトを構築できます。</p>
                     </div>
@@ -61,24 +69,30 @@ var srcPath = '../../';
             <section class="mjpl-conversion">
                 <p class="mjpc-paragraph mjpu-taCenter">法人の方・個人の方問わず承っております、<br>
                     まずはお気軽にご相談ください。</p>
-                <%- include(srcPath + 'objects/components/button', {data: [ {
+                <%- include(srcPath + 'objects/components/button', {datas: [{
+                items: [{
                 link: true,
                 name: 'サイト制作のご相談はこちら',
                 func: '/contact/'
+                }]
                 }]}) %>
             </section>
-            <%- include(srcPath + 'objects/components/heading', {data: [{
+            <%- include(srcPath + 'objects/components/heading', {datas: [{
+            items: [{
             lv: 1,
             tag: 2,
             name: '同業制作会社・フリーランスの方へ',
             utility: 'mjpu-taCenter'
+            }]
             }]}); %>
             <p class="mjpc-paragraph mjpu-fsS mjpu-taCenter">同業の方からのご依頼もお受けしております。<br>
                 お手伝いできそうなことがありましたらお気軽にご相談ください。</p>
-            <%- include(srcPath + 'objects/components/heading', {data: [{
+            <%- include(srcPath + 'objects/components/heading', {datas: [{
+            items: [{
             lv: 2,
             tag: 3,
             name: 'フロントエンド'
+            }]
             }]}); %>
             <p class="mjpc-paragraph">
                 既にデザインがある状態のモックアップやプロトタイプづくりから簡単な修正まで承れます。API、データベース連携等も承ります。基本的な作業スタンス、チェックブラウザにつきましては、コーディングポリシーを御覧ください。また、合わせて欲しいルールなどがある場合はご相談も可能です。<br>
@@ -86,34 +100,42 @@ var srcPath = '../../';
             <p class="mjpc-paragraph">
                 <a href="">【参考】当サイトのコーディングポリシー（フロントエンド）</a>
             </p>
-            <%- include(srcPath + 'objects/components/heading', {data: [{
+            <%- include(srcPath + 'objects/components/heading', {datas: [{
+            items: [{
             lv: 2,
             tag: 3,
             name: 'バックエンド'
+            }]
             }]}); %>
             <p class="mjpc-paragraph">
                 PHP, Python, Ruby等であれば承れます。
             </p>
-            <%- include(srcPath + 'objects/components/heading', {data: [{
+            <%- include(srcPath + 'objects/components/heading', {datas: [{
+            items: [{
             lv: 2,
             tag: 3,
             name: 'デザイン'
+            }]
             }]}); %>
             <p class="mjpc-paragraph">
                 Webサイト、Webアプリケーションに関するデザインであればPC,スマートフォン問わず一通り対応可能です。ただし、間接的なご依頼の場合、デザインの決定が難しくなりますので、ベースと鳴るデザイン、トーン&マナーがFIXしたあとにご依頼いただく形が安全です。
             </p>
-            <%- include(srcPath + 'objects/components/heading', {data: [{
+            <%- include(srcPath + 'objects/components/heading', {datas: [{
+            items: [{
             lv: 2,
             tag: 3,
             name: 'CMS'
+            }]
             }]}); %>
             <p class="mjpc-paragraph">
                 Webサイト、Webアプリケーションに関するデザインであればPC,スマートフォン問わず一通り対応可能です。ただし、間接的なご依頼の場合、デザインの決定が難しくなりますので、ベースと鳴るデザイン、トーン&マナーがFIXしたあとにご依頼いただく形が安全です。
             </p>
-            <%- include(srcPath + 'objects/components/heading', {data: [{
+            <%- include(srcPath + 'objects/components/heading', {datas: [{
+            items: [{
             lv: 2,
             tag: 3,
             name: '使用アプリケーション'
+            }]
             }]}); %>
             <p class="mjpc-paragraph">
                 Webサイト、Webアプリケーションに関するデザインであればPC,スマートフォン問わず一通り対応可能です。ただし、間接的なご依頼の場合、デザインの決定が難しくなりますので、ベースと鳴るデザイン、トーン&マナーがFIXしたあとにご依頼いただく形が安全です。
@@ -123,13 +145,13 @@ var srcPath = '../../';
                     法人の方・個人の方問わず承っております、<br>
                     まずはお気軽にご相談ください。
                 </p>
-                <%- include(srcPath + 'objects/components/button', {data: [
-                {
+                <%- include(srcPath + 'objects/components/button', {datas: [{
+                items: [{
                 link: true,
                 name: 'サイト制作のご相談はこちら',
                 func: '/contact/'
-                }
-                ]}); %>
+                }]
+                }]}); %>
             </section>
         </main>
     </div>

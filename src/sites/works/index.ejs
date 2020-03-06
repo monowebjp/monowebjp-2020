@@ -17,57 +17,51 @@ var srcPath = '../../';
     <%- include(srcPath + 'partials/header'); %>
     <div class="mjpl-content">
         <main id="app">
-            <%- include(srcPath + 'objects/components/heading', {data: [{
+            <%- include(srcPath + 'objects/components/heading', {datas: [{
+            items: [{
             lv: 1,
             tag: 1,
             name: '制作実績',
             utility: 'mjpu-taCenter'
+            }]
             }]}); %>
             <p class="mjpc-paragraph mjpu-fsS mjpu-taCenter">クライアント名は伏せさせていただいております。</p>
-            <%- include(srcPath + 'objects/components/tagToggle', {data: [
-            {
-            name: 'Webデザイン'
-            }, {
-            name: 'フロントエンド構築'
-            }, {
-            name: 'バックエンド構築'
-            }, {
-            name: 'ロゴデザイン'
-            }, {
-            name: '名刺デザイン'
-            }
-            ]}); %>
-            <%- include(srcPath + 'objects/components/heading', {data: [
-            {
+            <%- include(srcPath + 'objects/components/tag', {datas: [{
+            modifier: 'toggle',
+            items: [
+            { name: 'Webデザイン' },
+            { name: 'フロントエンド構築' },
+            { name: 'バックエンド構築'},
+            { name: 'ロゴデザイン' },
+            { name: '名刺デザイン' }
+            ]}]}); %>
+            <%- include(srcPath + 'objects/components/heading', {datas: [{
+            items: [{
             lv: 2,
             tag: 2,
             name: 2020
-            }
-            ]}); %>
+            }]
+            }]}); %>
             <div class="mjpp-workAccordion">
                 <div aria-expanded="true" aria-controls="workAccordionContent0" id="workAccordionTrigger0" class="mjpp-workAccordion__trigger">
                     <figure class="mjpp-workAccordion__figure">
                         <img src="/img/dummy-600x400.png" alt="">
                     </figure>
                     <div class="mjpp-workAccordion__text">
-                        <%- include(srcPath + 'objects/components/heading', {data: [
-                        {
+                        <%- include(srcPath + 'objects/components/heading', {datas: [{
+                        items: [{
                         lv: 3,
                         tag: 2,
                         name: 'ユーザー管理サービスUIリニューアル'
-                        }
-                        ]}); %>
-                        <ul class="mjpc-tag">
-                            <li class="mjpc-tag__item is-active">
-                                <span class="mjpc-tag__label">Webデザイン</span>
-                            </li>
-                            <li class="mjpc-tag__item is-inactive">
-                                <span class="mjpc-tag__label">フロントエンド構築</span>
-                            </li>
-                            <li class="mjpc-tag__item is-inactive">
-                                <span class="mjpc-tag__label">バックエンド構築</span>
-                            </li>
-                        </ul>
+                        }]
+                        }]}); %>
+                        <%- include(srcPath + 'objects/components/tag', {datas: [{
+                        modifier: 'toggle',
+                        items: [
+                        { name: 'Webデザイン', active: true },
+                        { name: 'フロントエンド構築', active: false },
+                        { name: 'バックエンド構築', active: false }
+                        ]}]}); %>
                         <p class="mjpc-paragraph">
                             3Dパースモデリングの集客を目的としたランディングページのデザイン。
                         </p>
@@ -77,13 +71,13 @@ var srcPath = '../../';
                     <div class="mjpc-grid">
                         <div class="mjpc-grid__inner">
                             <div class="mjpc-grid__col6">
-                                <%- include(srcPath + 'objects/components/heading', {data: [
-                                {
+                                <%- include(srcPath + 'objects/components/heading', {datas: [{
+                                items: [{
                                 lv: 3,
                                 tag: 3,
                                 name: 'チーム編成'
-                                }
-                                ]}); %>
+                                }]
+                                }]}); %>
                                 <div class="mjpp-tabRuler">
                                     <dl class="mjpp-tabRuler__item">
                                         <dt class="mjpp-tabRuler__title">ディレクター</dt>
@@ -104,13 +98,13 @@ var srcPath = '../../';
                                 </div>
                             </div>
                             <div class="mjpc-grid__col6">
-                                <%- include(srcPath + 'objects/components/heading', {data: [
-                                {
+                                <%- include(srcPath + 'objects/components/heading', {datas: [{
+                                items: [{
                                 lv: 3,
                                 tag: 3,
                                 name: 'アプリケーション'
-                                }
-                                ]}); %>
+                                }]
+                                }]}); %>
                                 <ul class="mjpc-tag mjpc-tag--noSeparate">
                                     <li class="mjpc-tag__item">
                                         <span class="mjpc-tag__icon"><img src="/assets/img/icon-figma.svg" alt=""></span>
@@ -125,55 +119,44 @@ var srcPath = '../../';
                                         <span class="mjpc-tag__icon"><img src="/assets/img/icon-intellij.svg" alt=""></span>
                                     </li>
                                 </ul>
-                                <%- include(srcPath + 'objects/components/heading', {data: [
-                                {
+                                <%- include(srcPath + 'objects/components/heading', {datas: [{
+                                items: [{
                                 lv: 3,
                                 tag: 3,
                                 name: '言語・フレームワーク'
-                                }
-                                ]}); %>
-                                <ul class="mjpc-tag">
-                                    <li class="mjpc-tag__item">
-                                        <span class="mjpc-tag__label">HTML</span>
-                                    </li>
-                                    <li class="mjpc-tag__item">
-                                        <span class="mjpc-tag__label">CSS</span>
-                                    </li>
-                                    <li class="mjpc-tag__item">
-                                        <span class="mjpc-tag__label">EJS</span>
-                                    </li>
-                                    <li class="mjpc-tag__item">
-                                        <span class="mjpc-tag__label">SCSS</span>
-                                    </li>
-                                    <li class="mjpc-tag__item">
-                                        <span class="mjpc-tag__label">Javascript</span>
-                                    </li>
-                                    <li class="mjpc-tag__item">
-                                        <span class="mjpc-tag__label">PHP</span>
-                                    </li>
-                                </ul>
+                                }]
+                                }]}); %>
+                                <%- include(srcPath + 'objects/components/tag', {datas: [{
+                                items: [
+                                { name: 'HTML' },
+                                { name: 'CSS' },
+                                { name: 'EJS' },
+                                { name: 'SCSS' },
+                                { name: 'Javascript' },
+                                { name: 'PHP' }
+                                ]}]}); %>
                             </div>
                         </div>
                     </div>
-                    <%- include(srcPath + 'objects/components/heading', {data: [
-                    {
+                    <%- include(srcPath + 'objects/components/heading', {datas: [{
+                    items: [{
                     lv: 3,
                     tag: 3,
                     name: '概要'
-                    }
-                    ]}); %>
+                    }]
+                    }]}); %>
                     <p class="mjpc-paragraph">
                         3Dパースモデリングの集客を目的としたランディングページのデザイン。3Dパースモデリングの集客を目的としたランディングページのデザイン。3Dパースモデリングの集客を目的としたランディングページのデザイン。
                     </p>
                 </div>
             </div>
-            <%- include(srcPath + 'objects/components/heading', {data: [
-            {
+            <%- include(srcPath + 'objects/components/heading', {datas: [{
+            items: [{
             lv: 2,
             tag: 2,
             name: 2019
-            }
-            ]}); %>
+            }]
+            }]}); %>
         </main>
     </div>
     <%- include(srcPath + 'partials/footer', {

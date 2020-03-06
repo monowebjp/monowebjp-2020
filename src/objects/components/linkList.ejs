@@ -1,6 +1,9 @@
+<%
+datas.forEach(function (data) {
+%>
 <ul class="mjpc-linkList mjpc-linkList--horizontal">
     <%
-    data.forEach(function (item) {
+    data.items.forEach(function (item) {
     %>
         <li class="mjpc-linkList__item">
             <a href="<%= item.link %>" class="mjpc-linkList__link">
@@ -9,3 +12,4 @@
         </li>
     <% }); %>
 </ul>
+<% }); %>

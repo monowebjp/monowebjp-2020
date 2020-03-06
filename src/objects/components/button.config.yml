@@ -1,11 +1,14 @@
 context:
-    data:
-        -   link: true
-            name: リンクテキスト
-            func: /example/
-        -   link: false
-            name: submitボタン
-            func: submit
-        -   link: false
-            name: buttonボタン
-            func: button
+    datas:
+        -   items:
+                link: true
+                name: リンクテキスト
+                func: /example/
+        -   items:
+                link: false
+                name: submitボタン
+                func: submit
+        -   items:
+                link: false
+                name: buttonテキスト
+                func: button
