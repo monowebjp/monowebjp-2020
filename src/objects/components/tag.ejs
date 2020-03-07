@@ -1,18 +1,21 @@
-<%
-datas.forEach(function (data) {
-%>
-    <ul class="mjpc-tag<%= data.modifier ? ' mjpc-tag--' + data.modifier : ''; %>">
-        <%
-        data.items.forEach(function (item, key) {
-        %>
-            <li class="mjpc-tag__item">
-                <% if (data.modifier !== 'toggle') { %>
-                    <span class="mjpc-tag__label<%= item.active ? ' is-active' : ''; %>"><%= item.name %></span>
-                <% } else { %>
-                    <input type="checkbox" name="mjplTag" id="mjpIdTag<%= key %>" class="mjpc-tag__input"<%= item.active ? ' checked' : ''; %>>
-                    <label for="mjpIdTag<%= key %>" class="mjpc-tag__label"><%= item.name %></label>
-                <% } %>
-            </li>
-        <% }); %>
-    </ul>
+<% datas.forEach(function (data) { %>
+    <div class="mjpc-tag<%= data.modifier ? ' mjpc-tag--' + data.modifier : ''; %>">
+        <%- include('./icon', {datas: [{
+            items: [{
+            name: data.icon
+        }]
+        }]});%>
+        <ul class="mjpc-tag__inner">
+            <% data.items.forEach(function (item, key) { %>
+                <li class="mjpc-tag__item">
+                    <% if (data.modifier !== 'toggle') { %>
+                        <span class="mjpc-tag__label<%= item.active ? ' is-active' : ''; %>"><%= item.name %></span>
+                    <% } else { %>
+                        <input type="checkbox" name="mjplTag" id="mjpIdTag<%= key %>" class="mjpc-tag__input"<%= item.active ? ' checked' : ''; %>>
+                        <label for="mjpIdTag<%= key %>" class="mjpc-tag__label"><%= item.name %></label>
+                    <% } %>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
 <% }); %>

@@ -3,6 +3,11 @@ datas.forEach(function (data) {
 data.items.forEach(function (item) {
 %>
     <h<%= item.tag %> class="mjpc-heading mjpc-heading--lv<%= item.lv %> <%= item.utility %>">
+        <%- include('./icon', {datas: [{
+            items: [{
+                name: item.icon
+            }]
+        }]}); %>
         <%= item.name %>
     </h<%= item.tag %>>
 <% }); %>

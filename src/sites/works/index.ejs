@@ -13,6 +13,7 @@ var srcPath = '../../';
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
+<%- include(srcPath + 'partials/icons'); %>
 <div class="mjpl-page">
     <%- include(srcPath + 'partials/header'); %>
     <div class="mjpl-content">
@@ -61,7 +62,9 @@ var srcPath = '../../';
                         { name: 'Webデザイン', active: true },
                         { name: 'フロントエンド構築', active: false },
                         { name: 'バックエンド構築', active: false }
-                        ]}]}); %>
+                        ],
+                        icon: 'tag'
+                        }]}); %>
                         <p class="mjpc-paragraph">
                             3Dパースモデリングの集客を目的としたランディングページのデザイン。
                         </p>
@@ -75,7 +78,8 @@ var srcPath = '../../';
                                 items: [{
                                 lv: 3,
                                 tag: 3,
-                                name: 'チーム編成'
+                                name: 'チーム編成',
+                                icon: 'team'
                                 }]
                                 }]}); %>
                                 <div class="mjpp-tabRuler">
@@ -102,7 +106,8 @@ var srcPath = '../../';
                                 items: [{
                                 lv: 3,
                                 tag: 3,
-                                name: 'アプリケーション'
+                                name: 'アプリケーション',
+                                    icon: 'laptop'
                                 }]
                                 }]}); %>
                                 <ul class="mjpc-tag mjpc-tag--noSeparate">
@@ -123,7 +128,8 @@ var srcPath = '../../';
                                 items: [{
                                 lv: 3,
                                 tag: 3,
-                                name: '言語・フレームワーク'
+                                name: '言語・フレームワーク',
+                                    icon: 'htmltag'
                                 }]
                                 }]}); %>
                                 <%- include(srcPath + 'objects/components/tag', {datas: [{
@@ -142,7 +148,8 @@ var srcPath = '../../';
                     items: [{
                     lv: 3,
                     tag: 3,
-                    name: '概要'
+                    name: '概要',
+                        icon: 'pen'
                     }]
                     }]}); %>
                     <p class="mjpc-paragraph">

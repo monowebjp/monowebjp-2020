@@ -1,0 +1,13 @@
+.mjpc-icon {
+    margin: 0 #{(5 / $base-font-size)}rem;
+    display: inline-flex;
+    align-items: flex-end;
+
+    &:first-child {
+        margin-left: 0;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}

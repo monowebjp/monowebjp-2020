@@ -1,11 +1,16 @@
 .mjpc-tag {
     $this: &;
-    margin: 0 auto #{(5 / $base-font-size)}rem;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
+    margin: 0 auto;
     max-width: #{(1022 / $base-font-size)}rem;
+    display: flex;
+
+    &__inner {
+        margin: 0 0 #{(5 / $base-font-size)}rem;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
 
     &__item {
         margin: 0 #{(5 / $base-font-size)}rem 0 0;
@@ -72,5 +77,10 @@
                 cursor: pointer;
             }
         }
+    }
+
+    .mjpc-icon {
+        width: #{(12 / $base-font-size)}rem;
+        height: #{(12 / $base-font-size * $line-height)}rem;
     }
 }
