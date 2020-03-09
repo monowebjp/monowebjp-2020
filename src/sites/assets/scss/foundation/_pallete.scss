@@ -1,4 +1,42 @@
-$primary-color: #603;
-$font-color: #333;
-$mono-light-color: #fff;
-$mono-dark-color: #666;
+$palettes: (
+    'primary': (
+        'base': #603
+    ),
+    'white': (
+        'light': #fff,
+        'base': #efefef,
+        'dark': #e2e2e2
+    ),
+    'gray': (
+        'light': #ddd,
+        'base': #aaa,
+        'dark': #999
+    ),
+    'black': (
+        'light': #666,
+        'base': #333,
+        'dark': #000
+    )
+);
+
+@function palettes($key, $tone: 'base') {
+    @return map-get(map-get($palettes, $key), $tone);
+}
+
+$font-color: palettes('black');
+$light-font-color: palettes('white', 'light');
+
+$topEffect-borderColor: palettes('white', 'light');
+$topLogo-backgroundColor: palettes('white', 'light');
+
+$globalNavigation-currentColor: palettes('primary');
+
+$checkedTagToggle-fontColor: palettes('white', 'light');
+$checkedTagToggle-backgroundColor: palettes('primary');
+$tagToggle-fontColor: palettes('primary');
+
+$mark-backgroundColor: palettes('primary');
+
+$button-primaryBaseColor: palettes('primary');
+
+$footer-borderTopColor: palettes('black', 'light');

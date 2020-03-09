@@ -21,7 +21,7 @@
             color: #999;
 
             &.is-active {
-                color: $primary-color;
+                color: $tagToggle-fontColor;
             }
         }
     }
@@ -51,9 +51,8 @@
 
             &:checked {
                 + #{$this}__label {
-                    background: $primary-color;
-                    border-color: $primary-color;
-                    color: $mono-light-color;
+                    background: $checkedTagToggle-backgroundColor;
+                    color: $checkedTagToggle-fontColor;
                 }
             }
         }

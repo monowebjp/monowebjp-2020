@@ -2,8 +2,8 @@
     display: inline-block;
     margin: 0 0 0 #{(5 / $base-font-size)}rem;
     padding: #{(2 / $base-font-size)}rem #{(5 / $base-font-size)}rem;
-    background: $primary-color;
-    color: $mono-light-color;
+    background: $mark-backgroundColor;
+    color: $light-font-color;
     font-style: normal;
     font-size: #{(11 / $base-font-size)}rem;
     border-radius: 4px;

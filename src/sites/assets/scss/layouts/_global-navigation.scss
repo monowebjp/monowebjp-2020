@@ -28,11 +28,11 @@
 
         &.is-current {
             #{$this}__icon {
-                fill: $primary-color;
+                fill: $globalNavigation-currentColor;
             }
 
             #{$this}__text {
-                color: $primary-color;
+                color: $globalNavigation-currentColor;
             }
         }
     }

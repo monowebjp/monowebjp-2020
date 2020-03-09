@@ -3,9 +3,11 @@ datas.forEach(function (data) {
 data.items.forEach(function (item) {
 %>
     <% if(item.name) { %>
-    <i class="mjpc-icon mjpc-icon-<%= item.name %>">
-        <svg class="mjpc-icon__image"><use xlink:href="#mjpc-icon--<%= item.name %>"></use></svg>
-    </i>
+        <i class="mjpc-icon mjpc-icon-<%= item.name %>">
+            <svg class="mjpc-icon__image" width="16" height="16">
+                <use xlink:href="#mjpc-icon--<%= item.name %>"></use>
+            </svg>
+        </i>
     <% } %>
 <% }); %>
 <% }); %>

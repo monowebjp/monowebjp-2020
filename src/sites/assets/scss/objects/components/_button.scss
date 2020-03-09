@@ -4,11 +4,14 @@
     display: block;
     width: 100%;
     max-width: #{(324 / $base-font-size)}rem;
-    border: 1px solid $primary-color;
     text-decoration: none;
     text-align: center;
-    color: $primary-color;
     line-height: 1.54;
+
+    &--primaryBase {
+        border: 1px solid $button-primaryBaseColor;
+        color: $button-primaryBaseColor;
+    }
 
     &:hover {
         cursor: pointer;
