@@ -18,10 +18,10 @@
 
     &--status {
         #{$this}__label {
-            color: #999;
+            color: $tagStatusInactive-fontColor;
 
             &.is-active {
-                color: $tagToggle-fontColor;
+                color: $tagStatusActive-fontColor;
             }
         }
     }
@@ -61,8 +61,8 @@
             padding: #{(7 / $base-font-size)}rem #{(10 / $base-font-size)}rem #{(5 / $base-font-size)}rem;
             display: block;
             font-size: #{(12 / $base-font-size)}rem;
-            border: 1px solid #999;
-            color: #999;
+            border: 1px solid $tagToggle-borderColor;
+            color: $tagToggle-fontColor;
             line-height: 1;
             border-radius: 1em;
             white-space: nowrap;

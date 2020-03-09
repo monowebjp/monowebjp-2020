@@ -33,7 +33,10 @@ $globalNavigation-currentColor: palettes('primary');
 
 $checkedTagToggle-fontColor: palettes('white', 'light');
 $checkedTagToggle-backgroundColor: palettes('primary');
-$tagToggle-fontColor: palettes('primary');
+$tagToggle-borderColor: palettes('gray', 'dark');
+$tagToggle-fontColor: palettes('gray', 'dark');
+$tagStatusActive-fontColor: palettes('primary');
+$tagStatusInactive-fontColor: palettes('gray', 'dark');
 
 $mark-backgroundColor: palettes('primary');
 
