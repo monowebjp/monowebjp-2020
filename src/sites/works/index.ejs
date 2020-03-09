@@ -107,29 +107,24 @@ var srcPath = '../../';
                                 lv: 3,
                                 tag: 3,
                                 name: 'アプリケーション',
-                                    icon: 'laptop'
+                                icon: 'laptop'
                                 }]
                                 }]}); %>
-                                <ul class="mjpc-tag mjpc-tag--noSeparate">
-                                    <li class="mjpc-tag__item">
-                                        <span class="mjpc-tag__icon"><img src="/assets/img/icon-figma.svg" alt=""></span>
-                                    </li>
-                                    <li class="mjpc-tag__item">
-                                        <span class="mjpc-tag__icon"><img src="/assets/img/icon-xd.svg" alt=""></span>
-                                    </li>
-                                    <li class="mjpc-tag__item">
-                                        <span class="mjpc-tag__icon"><img src="/assets/img/icon-illustrator.svg" alt=""></span>
-                                    </li>
-                                    <li class="mjpc-tag__item">
-                                        <span class="mjpc-tag__icon"><img src="/assets/img/icon-intellij.svg" alt=""></span>
-                                    </li>
-                                </ul>
+                                <%- include(srcPath + 'objects/components/tag', {datas: [{
+                                modifier: 'icons',
+                                items: [
+                                { icon: 'figma' },
+                                { icon: 'xd' },
+                                { icon: 'illustrator' },
+                                { icon: 'intellij' }
+                                ]
+                                }]}); %>
                                 <%- include(srcPath + 'objects/components/heading', {datas: [{
                                 items: [{
                                 lv: 3,
                                 tag: 3,
                                 name: '言語・フレームワーク',
-                                    icon: 'htmltag'
+                                icon: 'htmltag'
                                 }]
                                 }]}); %>
                                 <%- include(srcPath + 'objects/components/tag', {datas: [{

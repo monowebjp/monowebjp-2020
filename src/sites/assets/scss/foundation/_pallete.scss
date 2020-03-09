@@ -1,7 +1,8 @@
 $palettes: (
     'primary': (
-        'base': #603
+        'base': #603,
     ),
+    'seconday': (),
     'white': (
         'light': #fff,
         'base': #efefef,
@@ -31,10 +32,11 @@ $topLogo-backgroundColor: palettes('white', 'light');
 
 $globalNavigation-currentColor: palettes('primary');
 
-$checkedTagToggle-fontColor: palettes('white', 'light');
-$checkedTagToggle-backgroundColor: palettes('primary');
 $tagToggle-borderColor: palettes('gray', 'dark');
 $tagToggle-fontColor: palettes('gray', 'dark');
+$checkedTagToggle-fontColor: palettes('white', 'light');
+$checkedTagToggle-backgroundColor: palettes('primary');
+
 $tagStatusActive-fontColor: palettes('primary');
 $tagStatusInactive-fontColor: palettes('gray', 'dark');
 
