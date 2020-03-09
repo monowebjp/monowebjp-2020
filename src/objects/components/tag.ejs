@@ -11,14 +11,8 @@
                     <% if (data.modifier === 'toggle') { %>
                         <input type="checkbox" name="mjplTag" id="mjpIdTag<%= key %>" class="mjpc-tag__input"<%= item.active ? ' checked' : ''; %>>
                         <label for="mjpIdTag<%= key %>" class="mjpc-tag__label"><%= item.name %></label>
-                    <% } else if (data.modifier === 'icons' ) { %>
-                        <span class="mjpc-tag__icon">
-                            <%- include('./icon', {datas: [{
-                            items: [{
-                            name: item.icon
-                            }]
-                            }]}); %>
-                        </span>
+                    <% } else if (data.modifier === 'images' ) { %>
+                        <img src="<%= item.image %>" alt="<%= item.name %>" class="mjpc-tag__image">
                     <% } else { %>
                         <span class="mjpc-tag__label<%= item.active ? ' is-active' : ''; %>"><%= item.name %></span>
                     <% } %>
