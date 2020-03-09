@@ -5,9 +5,9 @@ datas.forEach(function (data) {
     data.items.forEach(function (item) {
     %>
         <% if (item.link) { %>
-            <a href="<%= item.func %>" class="mjpc-button"><%= item.name %></a>
+            <a href="<%= item.func %>" class="mjpc-button <%= item.modifier ? item.modifier : 'mjpc-button--primaryBase' %>"><%= item.name %></a>
         <% } else { %>
-            <button type="<%= item.func %>" class="mjpc-button"><%= item.name %></button>
+            <button type="<%= item.func %>" class="mjpc-button <%= item.modifier ? item.modifier : 'mjpc-button--primaryBase' %>"><%= item.name %></button>
     <% }
     }); %>
 <% }); %>
