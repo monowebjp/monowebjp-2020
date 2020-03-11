@@ -1,6 +1,12 @@
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
+
 module.exports = {
     mode: 'development',
     devtool: 'inline-source-map',
+    resolve: {
+        // '.ts' と '.vue' を追加
+        extensions: ['.js', '.ts', '.vue', '.json'],
+    },
     // メインとなるJavaScriptファイル（エントリーポイント）
     entry: {
         './dist/assets/js/bundle': './src/sites/assets/js/main.ts'
@@ -12,17 +18,23 @@ module.exports = {
     module: {
         rules: [
             {
-                // 拡張子 .ts の場合
+                // 'ts-loader' で TypeScript をコンパイル
                 test: /\.ts$/,
-                // TypeScript をコンパイルする
-                use: 'ts-loader'
+                exclude: /node_modules/,
+                loader: 'ts-loader',
+                // '*.vue' ファイルも TS として認識させるためのオプション
+                options: {
+                    appendTsSuffixTo: [/\.vue$/],
+                },
+            },
+            {
+                // 単一ファイルコンポーネントは vue-loader が処理
+                test: /\.vue$/,
+                exclude: /node_modules/,
+                loader: 'vue-loader',
             }
-        ]
+        ],
     },
-    // import 文で .ts ファイルを解決するため
-    resolve: {
-        extensions: [
-            '.ts'
-        ]
-    }
+    // プラグイン起動
+    plugins: [new VueLoaderPlugin()],
 };

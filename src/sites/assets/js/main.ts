@@ -1,4 +1,9 @@
-import { shareFacebook, shareHatena, shareLine, shareTwitter } from './share';
+import {
+    shareFacebook,
+    shareHatena,
+    shareLine,
+    shareTwitter
+} from './objects/components/share';
 
 interface MyWindow extends Window {
     shareFacebook: {};

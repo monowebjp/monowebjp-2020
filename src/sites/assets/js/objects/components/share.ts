@@ -7,7 +7,7 @@ const shareWindow = (shareUrl: string) => {
         '',
         'width=580,height=400,menubar=no,toolbar=no,scrollbars=yes'
     );
-}
+};
 
 export const shareFacebook = (): boolean => {
     const shareUrl = `//www.facebook.com/share.php?u=${url}`;
