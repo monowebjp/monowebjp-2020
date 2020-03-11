@@ -9,7 +9,8 @@ module.exports = {
     },
     // メインとなるJavaScriptファイル（エントリーポイント）
     entry: {
-        './dist/assets/js/bundle': './src/sites/assets/js/main.ts'
+        './dist/assets/js/bundle': './src/sites/assets/js/main.ts',
+        './dist/assets/js/workSortable': './src/sites/assets/js/workSortable.ts'
     },
     output: {
         path: __dirname,
