@@ -1,7 +1,7 @@
 .mjpc-tag {
     $this: &;
     margin: 0 auto;
-    max-width: #{(1022 / $base-font-size)}rem;
+    max-width: $content-width;
     display: flex;
 
     &__inner {
@@ -52,6 +52,7 @@
 
             &:checked {
                 + #{$this}__label {
+                    border-color: $checkedTagToggle-borderColor;
                     background: $checkedTagToggle-backgroundColor;
                     color: $checkedTagToggle-fontColor;
                 }

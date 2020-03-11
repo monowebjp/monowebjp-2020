@@ -1,7 +1,7 @@
 .mjpp-workAccordion {
     $this: &;
     margin: 0 auto;
-    max-width: #{(1022 / $base-font-size)}rem;
+    max-width: $content-width;
 
     &__trigger {
         position: relative;

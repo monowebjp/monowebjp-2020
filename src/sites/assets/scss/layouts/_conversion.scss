@@ -1,6 +1,6 @@
 .mjpl-conversion {
     margin: #{(65 / $base-font-size)}rem auto;
-    max-width: #{(1022 / $base-font-size)}rem;
+    max-width: $content-width;
 
     &:last-child {
         margin-bottom: 0;
