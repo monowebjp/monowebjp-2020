@@ -27,15 +27,7 @@ var srcPath = '../../';
             }]
             }]}); %>
             <p class="mjpc-paragraph mjpu-fsS mjpu-taCenter">クライアント名は伏せさせていただいております。</p>
-            <%- include(srcPath + 'objects/components/tag', {datas: [{
-            modifier: 'toggle',
-            items: [
-            { name: 'Webデザイン' },
-            { name: 'フロントエンド構築' },
-            { name: 'バックエンド構築'},
-            { name: 'ロゴデザイン' },
-            { name: '名刺デザイン' }
-            ]}]}); %>
+            <div id="workSortable"></div>
             <%- include(srcPath + 'objects/components/heading', {datas: [{
             items: [{
             lv: 2,
@@ -43,7 +35,6 @@ var srcPath = '../../';
             name: 2020
             }]
             }]}); %>
-            <div id="workSortable"></div>
             <div class="mjpp-workAccordion">
                 <div aria-expanded="false" aria-controls="workAccordionContent0" id="workAccordionTrigger0" class="mjpp-workAccordion__trigger">
                     <figure class="mjpp-workAccordion__figure">

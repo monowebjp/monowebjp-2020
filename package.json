@@ -34,7 +34,7 @@
     "watch": "run-p prod watch:*",
     "watch:ejs": "chokidar \"src/**/*.ejs\" -c \"npm run ejs\"",
     "watch:css": "chokidar \"src/sites/assets/scss/**/*.scss\" -c \"npm run css\"",
-    "watch:js": "chokidar \"src/sites/assets/js/**/*.ts\" -c \"npm run js\"",
+    "watch:js": "chokidar \"src/sites/assets/js/**/*.(ts|vue)\" -c \"npm run js\"",
     "watch:image": "chokidar  \"src/**/*.(gif|jpg|png|svg)\" -c \"npm run image\"",
     "server": "browser-sync start --config bs-config.js",
     "update": "ncu -u"
