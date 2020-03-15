@@ -1,15 +1,33 @@
 .mjpp-workAccordion {
     $this: &;
     margin: 0 auto;
-    max-width: #{(1022 / $base-font-size)}rem;
+    max-width: $content-width;
 
     &__trigger {
+        position: relative;
         display: flex;
         flex-wrap: nowrap;
         padding: #{(30 / $base-font-size)}rem #{(20 / $base-font-size)}rem;
 
+        &:hover {
+            cursor: pointer;
+        }
+
+        &[aria-expanded='false'] {
+            + #{$this}__content {
+                height: 0;
+            }
+        }
+
         .mjpc-tag__label {
             font-size: #{(12 / $base-font-size)}rem;
+        }
+
+        .mjpc-icon--arrowTop {
+            position: absolute;
+            top: 50%;
+            right: #{(20 / $base-font-size)}rem;
+            transform: rotate(180deg);
         }
     }
 
@@ -24,6 +42,11 @@
     }
 
     &__content {
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    &__contentInner {
         padding: #{(30 / $base-font-size)}rem #{(20 / $base-font-size)}rem;
     }
 }

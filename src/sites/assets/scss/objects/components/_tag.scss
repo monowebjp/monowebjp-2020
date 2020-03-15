@@ -1,7 +1,7 @@
 .mjpc-tag {
     $this: &;
     margin: 0 auto;
-    max-width: #{(1022 / $base-font-size)}rem;
+    max-width: $content-width;
     display: flex;
 
     &__inner {
@@ -18,23 +18,24 @@
 
     &--status {
         #{$this}__label {
-            color: #999;
+            color: $tagStatusInactive-fontColor;
 
             &.is-active {
-                color: $primary-color;
+                color: $tagStatusActive-fontColor;
             }
         }
     }
 
-    &--noSeparate {
-        #{$this}__icon {
+    &--images {
+        #{$this}__item {
             display: block;
             margin: 0 #{(5 / $base-font-size)}rem 0 0;
+        }
 
-            > img {
-                width: #{(24 / $base-font-size)}rem;
-                height: #{(24 / $base-font-size)}rem;
-            }
+        #{$this}__image {
+            display: block;
+            width: #{(24 / $base-font-size)}rem;
+            height: #{(24 / $base-font-size)}rem;
         }
     }
 
@@ -51,9 +52,9 @@
 
             &:checked {
                 + #{$this}__label {
-                    background: $primary-color;
-                    border-color: $primary-color;
-                    color: $mono-light-color;
+                    border-color: $checkedTagToggle-borderColor;
+                    background: $checkedTagToggle-backgroundColor;
+                    color: $checkedTagToggle-fontColor;
                 }
             }
         }
@@ -62,8 +63,8 @@
             padding: #{(7 / $base-font-size)}rem #{(10 / $base-font-size)}rem #{(5 / $base-font-size)}rem;
             display: block;
             font-size: #{(12 / $base-font-size)}rem;
-            border: 1px solid #999;
-            color: #999;
+            border: 1px solid $tagToggle-borderColor;
+            color: $tagToggle-fontColor;
             line-height: 1;
             border-radius: 1em;
             white-space: nowrap;
