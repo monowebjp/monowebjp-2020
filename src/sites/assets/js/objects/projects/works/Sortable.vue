@@ -1,7 +1,7 @@
 <template>
     <div>
         <ToggleTag :tags="tags"/>
-        <Year/>
+        <Year :lv="2" :text="2020"/>
         <Accordion :items="items" :tags="tags"/>
     </div>
 </template>
