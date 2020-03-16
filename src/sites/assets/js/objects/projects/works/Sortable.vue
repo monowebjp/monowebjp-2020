@@ -2,7 +2,7 @@
     <div>
         <ToggleTag :tags="tags"/>
         <Year/>
-        <Accordion :items="items"/>
+        <Accordion :items="items" :tags="tags"/>
     </div>
 </template>
 
@@ -22,10 +22,20 @@
             tags: []
         }),
         mounted() {
-            this.fetchItems('/works/api/tags.json', 'tags');
-            this.fetchItems('/works/api/lists/list-2020.json', 'items');
+            this.getTags();
+            this.getItems();
         },
         methods: {
+            getTags() {
+                this.fetchItems('/works/api/tags.json', 'tags');
+            },
+            getItems() {
+                // TODO 今年の西暦を取得
+                // TODO 昨年のファイルの有無を確認
+                // TODO あればmoreボタンを表示
+                this.fetchItems('/works/api/lists/list-2020.json', 'items');
+            },
+            // TODO moreボタンをクリックしたときの挙動を追加
             fetchItems(apiUrl: string, param: string) {
                 fetch(apiUrl)
                     .then(res => {

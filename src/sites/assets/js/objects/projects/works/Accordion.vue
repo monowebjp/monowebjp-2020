@@ -10,7 +10,7 @@
                         </svg>
                     </i>
                         <ul class="mjpc-tag__inner">
-                            <li class="mjpc-tag__item" v-for="tag in item.tags"><span :class="'mjpc-tag__label ' + tag.active">{{ tags[tag.id].name }}</span></li>
+                            <li class="mjpc-tag__item" v-for="tag in item.tags"><span class="mjpc-tag__label">{{ tags[tag.id].name }}</span></li>
                         </ul>
                     </div>
                     <p class="mjpc-paragraph">{{ item.description }}</p>

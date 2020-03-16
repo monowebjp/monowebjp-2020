@@ -29,7 +29,7 @@
     "js": "run-s js:lint js:ts",
     "js:ts": "webpack",
     "js:lint": "eslint src/sites/assets/js -c .eslintrc.json --ext ts,tsx --fix; exit 0",
-    "json": "cpx -C src/sites/**/*.json dist",
+    "json": "cpx -C 'src/sites/**/*.json' dist",
     "prod:js": "run-s js:lint prod:js:ts",
     "prod:js:ts": "webpack --mode production",
     "watch": "run-p prod watch:*",
