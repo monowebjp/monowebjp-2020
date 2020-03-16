@@ -1,8 +1,8 @@
 <template>
     <div>
-        <ToggleTag :items="tags"/>
+        <ToggleTag :tags="tags"/>
         <Year/>
-        <Accordion/>
+        <Accordion :items="items"/>
     </div>
 </template>
 
@@ -17,19 +17,25 @@
             ToggleTag,
             Accordion
         },
-        data() {
-            return {
-                tags: null
-            }
-        },
+        data: () => ({
+            items: [],
+            tags: []
+        }),
         mounted() {
-            fetch('/works/api/tags.json')
-                .then(function (res) {
-                    return res.json();
-                })
-                .then(function (json) {
-                    this.tags = json;
-                });
+            this.fetchItems('/works/api/tags.json', 'tags');
+            this.fetchItems('/works/api/lists/list-2020.json', 'items');
+        },
+        methods: {
+            fetchItems(apiUrl: string, param: string) {
+                fetch(apiUrl)
+                    .then(res => {
+                        return res.json();
+                    })
+                    .then(json => {
+                        console.log(json.items);
+                        this[param] = json.items;
+                    });
+            }
         }
     }
 

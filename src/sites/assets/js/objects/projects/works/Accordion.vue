@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div class="mjpp-workAccordion" v-for="item in items">
-            <div aria-expanded="false" aria-controls="workAccordionContent0" id="workAccordionTrigger0" class="mjpp-workAccordion__trigger">
+        <div class="mjpp-workAccordion" v-for="(item, index) in items">
+            <div aria-expanded="false" :aria-controls="'workAccordionContent' + index" id="'workAccordionTrigger' + index" class="mjpp-workAccordion__trigger">
                 <figure class="mjpp-workAccordion__figure"><img :src="item.thumbnail" alt=""></figure>
                 <div class="mjpp-workAccordion__text"><h2 class="mjpc-heading mjpc-heading--lv3"><span class="mjpc-heading__text">{{item.title}}</span></h2>
                     <div class="mjpc-tag mjpc-tag--status"><i class="mjpc-icon mjpc-icon--tag">
@@ -10,7 +10,7 @@
                         </svg>
                     </i>
                         <ul class="mjpc-tag__inner">
-                            <li class="mjpc-tag__item" v-for="tag in item.tags"><span :class="'mjpc-tag__label ' + tag.active">{{ tag.name }}</span></li>
+                            <li class="mjpc-tag__item" v-for="tag in item.tags"><span :class="'mjpc-tag__label ' + tag.active">{{ tags[tag.id].name }}</span></li>
                         </ul>
                     </div>
                     <p class="mjpc-paragraph">{{ item.description }}</p>
@@ -94,25 +94,7 @@
 </template>
 
 <script lang="ts">
-    import Vue from 'vue';
-
-    export default Vue.extend({
-        data: () => {
-            return {
-                items: [
-                    {
-                        "id": 0,
-                        "thumbnail": "/img/dummy-600x400.png",
-                        "title": "ユーザー管理サービスUIリニューアル",
-                        "tags": [
-                            0,
-                            1,
-                            2
-                        ],
-                        "description": "3Dパースモデリングの集客を目的としたランディングページのデザイン。"
-                    }
-                ]
-            };
-        },
-    })
+    export default {
+        props: ['items', 'tags']
+    }
 </script>
