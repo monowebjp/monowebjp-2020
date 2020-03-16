@@ -36,6 +36,7 @@
                 this.fetchItems('/works/api/lists/list-2020.json', 'items');
             },
             // TODO moreボタンをクリックしたときの挙動を追加
+            // TODO アコーディオンをクリックしたときの挙動を追加
             fetchItems(apiUrl: string, param: string) {
                 fetch(apiUrl)
                     .then(res => {
