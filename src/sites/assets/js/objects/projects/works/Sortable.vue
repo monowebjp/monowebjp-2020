@@ -7,13 +7,9 @@
 </template>
 
 <script lang="ts">
-    import ToggleTag from './ToggleTag';
-    import Year from './Year';
-    import Accordion from './Accordion';
-
-    function test(json) {
-        return json;
-    }
+    import ToggleTag from "./ToggleTag.vue";
+    import Year from "./Year.vue";
+    import Accordion from "./Accordion.vue";
 
     export default {
         components: {
