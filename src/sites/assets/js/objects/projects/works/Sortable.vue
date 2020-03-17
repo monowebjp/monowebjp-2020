@@ -3,6 +3,8 @@
         <ToggleTag :tags="tags"/>
         <Year :lv="2" :text="2020"/>
         <Accordion :items="items" :tags="tags"/>
+        <Year :lv="2" :text="2019"/>
+        <Accordion :items="items" :tags="tags"/>
         <MoreButton text="前の年を見る"/>
     </div>
 </template>
