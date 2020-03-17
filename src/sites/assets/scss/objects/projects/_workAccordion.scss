@@ -3,6 +3,10 @@
     margin: 0 auto;
     max-width: $content-width;
 
+    & + #{$this} {
+        border-top: 1px solid $workAccordion-borderColor;
+    }
+
     &__trigger {
         position: relative;
         display: flex;

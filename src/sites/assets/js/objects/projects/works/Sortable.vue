@@ -3,6 +3,7 @@
         <ToggleTag :tags="tags"/>
         <Year :lv="2" :text="2020"/>
         <Accordion :items="items" :tags="tags"/>
+        <MoreButton text="前の年を見る"/>
     </div>
 </template>
 
@@ -10,12 +11,14 @@
     import ToggleTag from "./ToggleTag.vue";
     import Year from "./Year.vue";
     import Accordion from "./Accordion.vue";
+    import MoreButton from "./MoreButton.vue";
 
     export default {
         components: {
             Year,
             ToggleTag,
-            Accordion
+            Accordion,
+            MoreButton
         },
         data: () => ({
             items: [],

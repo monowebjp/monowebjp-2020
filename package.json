@@ -13,7 +13,7 @@
   "browserslist": "last 2 version",
   "scripts": {
     "start": "run-p watch server",
-    "prod": "run-s clean image prod:js prod:css prod:html",
+    "prod": "run-s clean image json prod:js prod:css prod:html",
     "clean": "rm -r -f dist/*",
     "image": "node imagemin-config.js",
     "css": "run-s css:lint css:sass css:postcss",
