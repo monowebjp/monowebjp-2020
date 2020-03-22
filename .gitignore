@@ -6,3 +6,4 @@ yarn-error.log
 org-chimata-ssl-certs
 dist
 styleguide
+.env
