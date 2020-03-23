@@ -25,3 +25,4 @@ webpack.config.js
 yarn.lock
 key
 .env
+.htpasswd
