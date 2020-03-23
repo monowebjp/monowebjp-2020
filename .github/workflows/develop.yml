@@ -34,3 +34,5 @@ jobs:
                   SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           -   name: rsync Deploy
               run: rsync -auz --delete --exclude-from=./.rsyncignore -e "ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" ./ monowebjp@153.127.25.158:/home/monowebjp/stg0000.monoweb.jp
+          -   name: Setup Docker
+              run: ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no monowebjp@153.127.25.158 '/home/monowebjp/stg0000.monoweb.jp && docker-compose up -d && docker-compose restart'
