@@ -1,7 +1,9 @@
 .github
 @types
+
 documents
 node_modules
+
 src
 .editorconfig
 .env.sample
