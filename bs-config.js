@@ -37,7 +37,7 @@ module.exports = {
     },
     "server": false,
     "https": true,
-    "proxy": "monoweb.jp.local:8000",
+    "proxy": "local0000.monoweb.jp",
     "port": 3000,
     "middleware": false,
     "serveStatic": [],

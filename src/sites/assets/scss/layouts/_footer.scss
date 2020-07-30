@@ -7,8 +7,12 @@
 
     &__inner {
         margin: 0 auto;
-        max-width: #{(1012 / $base-font-size)}rem;
+        //max-width: #{(1012 / $base-font-size)}rem;
         background: left 50% bottom 5px no-repeat url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxIiBoZWlnaHQ9IjU1LjUiPjxwYXRoIGZpbGw9IiM2NjYiIGQ9Ik0wIDBoMXY1NS41SDB6Ii8+PC9zdmc+');
+
+        .mjpc-grid {
+            max-width: 100%;
+        }
     }
 
     &__upper {
