@@ -5,18 +5,21 @@
     position: fixed;
     top: 0;
     left: 0;
+    z-index: -1;
     width: 100vw;
     height: 100vh;
-    animation: topEffect 4s cubic-bezier(.445, .05, .55, .95) 2s forwards;
+    //animation: topEffect 4s cubic-bezier(.445, .05, .55, .95) 2s forwards;
 
     &__mask {
         position: fixed;
         top: 0;
         left: 0;
+        z-index: -1;
+        opacity: 0;
         width: 100vw;
         height: 100vh;
         background: linear-gradient(to bottom, #2970ce 0%, #82c6ff 100%);
-        animation: topEffectMask 4s cubic-bezier(.445, .05, .55, .95) 2s forwards;
+        //animation: topEffectMask 4s cubic-bezier(.445, .05, .55, .95) 2s forwards;
     }
 
     &__window {
