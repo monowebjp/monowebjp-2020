@@ -11,6 +11,7 @@
     &--primaryBase {
         border: 1px solid $button-primaryBaseColor;
         color: $button-primaryBaseColor;
+        background: $button-primaryBackgroundColor;
     }
 
     &:hover {
