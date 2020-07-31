@@ -1,7 +1,8 @@
 <%
+var _modifier =  typeof modifier !== 'undefined' ? ' ' + modifier : '';
 datas.forEach(function (data) {
 %>
-<ul class="mjpc-linkList mjpc-linkList--horizontal">
+<ul class="mjpc-linkList<%= _modifier %>">
     <%
     data.items.forEach(function (item) {
     %>

@@ -1,0 +1,77 @@
+<%
+var srcPath = '../../';
+%>
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>コーディングポリシー | <%= site.title %></title>
+    <%- include(srcPath + 'partials/head'); %>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<div class="mjpl-page">
+    <%- include(srcPath + 'partials/header'); %>
+    <div class="mjpl-content">
+        <main>
+            <%- include(srcPath + 'objects/components/heading', {datas: [{
+            items: [{
+            lv: 1,
+            tag: 1,
+            name: 'コーディングポリシー',
+            utility: 'mjpu-taCenter'
+            }]
+            }]}); %>
+            <%- include(srcPath + 'objects/components/heading', {datas: [{
+            items: [{
+            lv: 2,
+            tag: 2,
+            name: 'HTML, CSS'
+            }]
+            }]}); %>
+            <%- include(srcPath + 'objects/components/linkList', {datas: [{
+            items: [{
+            name: "HTML5にて記述します"
+            },{
+            name: "文法とSEOを重視します"
+            },{
+            name: "第三者にも見やすく汎用的なマークアップを行います"
+            },{
+            name: "CSSのclass名は原則BEM記法とします"
+            },{
+            name: "CSSの新しい機能を用いる場合、旧ブラウザでの表現を簡素化することがあります"
+            },{
+            name: "印刷は環境に左右されるため原則考慮しておりません"
+            }]
+            }]}); %>
+            <%- include(srcPath + 'objects/components/heading', {datas: [{
+            items: [{
+            lv: 2,
+            tag: 2,
+            name: 'Javascript'
+            }]
+            }]}); %>
+            <%- include(srcPath + 'objects/components/linkList', {datas: [{
+            items: [{
+            name: "Javascriptを無効としているブラウザは原則考慮しません"
+            },{
+            name: "公開されているJavascriptの関数等を利用する場合、ソース元をコメントに記述します"
+            },{
+            name: "使用したプラグインやそのバージョン、 注意事項などは別途納品時の仕様書にまとめます"
+            }]
+            }]}); %>
+        </main>
+    </div>
+    <%- include(srcPath + 'partials/footer', {
+    next: {
+    name: "制作実績",
+    link: "/works/"
+    }
+    }); %>
+</div>
+<script src="/assets/js/bundle.js"></script>
+</body>
+</html>
