@@ -32,7 +32,9 @@ var srcPath = '../../';
             name: 'HTML, CSS'
             }]
             }]}); %>
-            <%- include(srcPath + 'objects/components/linkList', {datas: [{
+            <%- include(srcPath + 'objects/components/linkList', {
+            modifier: "mjpc-linkList--vertical",
+            datas: [{
             items: [{
             name: "HTML5にて記述します"
             },{
@@ -54,7 +56,9 @@ var srcPath = '../../';
             name: 'Javascript'
             }]
             }]}); %>
-            <%- include(srcPath + 'objects/components/linkList', {datas: [{
+            <%- include(srcPath + 'objects/components/linkList', {
+            modifier: "mjpc-linkList--vertical",
+            datas: [{
             items: [{
             name: "Javascriptを無効としているブラウザは原則考慮しません"
             },{

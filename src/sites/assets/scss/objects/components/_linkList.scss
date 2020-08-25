@@ -1,8 +1,32 @@
 .mjpc-linkList {
     $this: &;
-    margin: 0;
+    max-width: #{(1012 / $base-font-size)}rem;
+    margin: 0 auto #{(30 / $base-font-size)}rem;
     padding: 0;
     list-style: none;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &#{$this}--vertical {
+        #{$this}__item {
+            padding: 0 0 0 1em;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                width: 5px;
+                height: 5px;
+                background: $font-color;
+                border-radius: 50%;
+            }
+        }
+    }
 
     &#{$this}--horizontal {
         display: flex;
